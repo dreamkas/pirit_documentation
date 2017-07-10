@@ -6,9 +6,9 @@ import string
 import subprocess
 
 def main():
-    documentationInputFile = "documentation.md"
-    documentationPirit2fOutputFile = "documentation_pirit2f.md"
-    documentationFm16OutputFile = "documentation_fm16.md"
+    documentationInputFile = "documentation_1_05.md"
+    documentationPirit2fOutputFile = "documentation_pirit2f_1_05.md"
+    documentationFm16OutputFile = "documentation_fm16_1_05.md"
 
     pirit2fStartLabel = "<<<<<< Pirit2f start >>>>>>"
     pirit2fEndLabel = "<<<<<< Pirit2F end >>>>>>"
@@ -47,16 +47,16 @@ def main():
 
     file_pirit2f.close()
     file_fm16.close()
-    proc = subprocess.Popen("python backdoc.py -t FM16 -s documentation_fm16.md > output/documentation_fm16.html", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("python backdoc.py -t FM16 -s documentation_fm16_1_05.md > output/documentation_fm16_1_05.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("python backdoc.py -t Pirit2F -s documentation_pirit2f.md > output/documentation_pirit2f.html", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("python backdoc.py -t Pirit2F -s documentation_pirit2f_1_05.md > output/documentation_pirit2f_1_05.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_pirit2f.md", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("rm documentation_pirit2f_1_05.md", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_fm16.md", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("rm documentation_fm16_1_05.md", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
     print("Done")
