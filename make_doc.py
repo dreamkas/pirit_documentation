@@ -11,7 +11,7 @@ def main():
     documentationFm16OutputFile = "documentation_fm16_1_05.md"
 
     pirit2fStartLabel = "<<<<<< Pirit2f start >>>>>>"
-    pirit2fEndLabel = "<<<<<< Pirit2F end >>>>>>"
+    pirit2fEndLabel = "<<<<<< Pirit2f end >>>>>>"
     fm16StartLabel = "<<<<<< FM16 start >>>>>>"
     fm16EndLabel = "<<<<<< FM16 end >>>>>>"
 
