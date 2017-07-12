@@ -4172,6 +4172,14 @@ https://github.com/chibisov/backdoc
   <td>5</td>
   <td>0 - не печатать QR на чеке, 1 - печатать QR код на чеке (неотключаемая настройка, всегда 1)</td>
 </tr>
+<tr>
+  <td>6</td>
+  <td>0 - не печатать отделы на чеках(*), 1 - печатать отделы на чеках</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>0 - печатать документы на чековой ленте(*), 1 - не печатать документы на чековой ленте</td>
+</tr>
 </tbody>
 </table>
 
@@ -4553,8 +4561,8 @@ https://github.com/chibisov/backdoc
   <td>Команда выполнена без ошибок</td>
 </tr>
 <tr>
-  <td><strong>Ошибки выполнение команд</strong></td>
   <td></td>
+  <td><strong>Ошибки выполнение команд</strong></td>
 </tr>
 <tr>
   <td>0x01</td>
@@ -4569,8 +4577,8 @@ https://github.com/chibisov/backdoc
   <td>Некорректный формат или параметр команды</td>
 </tr>
 <tr>
-  <td><strong>Ошибки протокола передачи данных</strong></td>
   <td></td>
+  <td><strong>Ошибки протокола передачи данных</strong></td>
 </tr>
 <tr>
   <td>0x04</td>
@@ -4589,8 +4597,8 @@ https://github.com/chibisov/backdoc
   <td>Ошибка контрольной суммы в команде</td>
 </tr>
 <tr>
-  <td><strong>Ошибки печатающего устройства</strong></td>
   <td></td>
+  <td><strong>Ошибки печатающего устройства</strong></td>
 </tr>
 <tr>
   <td>0x08</td>
@@ -4601,8 +4609,8 @@ https://github.com/chibisov/backdoc
   <td>Принтер не готов</td>
 </tr>
 <tr>
-  <td><strong>Ошибки даты/времени</strong></td>
   <td></td>
+  <td><strong>Ошибки даты/времени</strong></td>
 </tr>
 <tr>
   <td>0x0A</td>
@@ -4617,8 +4625,8 @@ https://github.com/chibisov/backdoc
   <td>Вводимая дата более ранняя, чем дата последней фискальной операции</td>
 </tr>
 <tr>
-  <td><strong>Прочие ошибки</strong></td>
   <td></td>
+  <td><strong>Прочие ошибки</strong></td>
 </tr>
 <tr>
   <td>0x0E</td>
@@ -4641,16 +4649,16 @@ https://github.com/chibisov/backdoc
   <td>Ошибка посылки данных в ОФД</td>
 </tr>
 <tr>
-  <td><strong>Фатальные ошибки</strong></td>
   <td></td>
+  <td><strong>Фатальные ошибки</strong></td>
 </tr>
 <tr>
   <td>0x20</td>
   <td>Фатальная ошибка ККТ. Причины возникновения данной ошибки можно уточнить в ”Статусе фатальных ошибок ККТ”</td>
 </tr>
 <tr>
-  <td><strong>Ошибки ФН</strong></td>
   <td></td>
+  <td><strong>Ошибки ФН</strong></td>
 </tr>
 <tr>
   <td>0x41</td>
