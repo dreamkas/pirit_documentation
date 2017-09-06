@@ -100,7 +100,7 @@ def main():
     file_p2Fd3.close()
     file_fm16Fd2.close()
     file_fm16Fd3.close()
-    
+
     # proc = subprocess.Popen("python backdoc.py -t Pirit1F -s documentation_pirit1f_1_05.md > output/documentation_pirit1f_1_05.html", shell=True, stdout=subprocess.PIPE)
     # out = proc.stdout.readlines()
 
@@ -119,24 +119,30 @@ def main():
     proc = subprocess.Popen("python backdoc.py -t FM16 -s documentation_fm16_1_1.md > output/documentation_fm16_1_1.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_pirit1f_1_05.md", shell=True, stdout=subprocess.PIPE)
-    out = proc.stdout.readlines()
+    # proc = subprocess.Popen("rm documentation_pirit1f_1_05.md", shell=True, stdout=subprocess.PIPE)
+    # out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_pirit1f_1_1.md", shell=True, stdout=subprocess.PIPE)
-    out = proc.stdout.readlines()
+    # proc = subprocess.Popen("rm documentation_pirit1f_1_1.md", shell=True, stdout=subprocess.PIPE)
+    # out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_pirit2f_1_05.md", shell=True, stdout=subprocess.PIPE)
-    out = proc.stdout.readlines()
+    # proc = subprocess.Popen("rm documentation_pirit2f_1_05.md", shell=True, stdout=subprocess.PIPE)
+    # out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_pirit2f_1_1.md", shell=True, stdout=subprocess.PIPE)
-    out = proc.stdout.readlines()
+    # proc = subprocess.Popen("rm documentation_pirit2f_1_1.md", shell=True, stdout=subprocess.PIPE)
+    # out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_fm16_1_05.md", shell=True, stdout=subprocess.PIPE)
-    out = proc.stdout.readlines()
+    # proc = subprocess.Popen("rm documentation_fm16_1_05.md", shell=True, stdout=subprocess.PIPE)
+    # out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("rm documentation_fm16_1_1.md", shell=True, stdout=subprocess.PIPE)
-    out = proc.stdout.readlines()
+    # proc = subprocess.Popen("rm documentation_fm16_1_1.md", shell=True, stdout=subprocess.PIPE)
+    # out = proc.stdout.readlines()
 
+    os.remove(documentationPirit1fFd2OutputFile);
+    os.remove(documentationPirit1fFd3OutputFile);
+    os.remove(documentationPirit2fFd2OutputFile);
+    os.remove(documentationFm16Fd2OutputFile);
+    os.remove(documentationPirit2fFd3OutputFile);
+    os.remove(documentationFm16Fd3OutputFile);
     print("Done")
 
 if __name__ == '__main__':
