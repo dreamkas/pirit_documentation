@@ -10,7 +10,7 @@ https://github.com/chibisov/backdoc
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="HandheldFriendly" content="true" />
-    <title>Pirit2F</title>
+    <title>FM16</title>
 
     <style type="text/css">
         * {
@@ -457,7 +457,7 @@ https://github.com/chibisov/backdoc
     </a>
     <div class="sidebar">
         <ul>
-  <li><a href="#instruktsiya-po-programmirovaniyu-kkt-pirit-2f-ffd-1-05">Инструкция по программированию ККТ Пирит 2Ф ФФД 1.05</a></li>
+  <li><a href="#instruktsiya-po-programmirovaniyu-fm16-ffd-1-1">Инструкция по программированию FM16 ФФД 1.1</a></li>
   <li><a href="#opisanie-protokola">Описание протокола</a>
   <ul>
     <li><a href="#format-protokola-peredachi-komand">Формат протокола передачи команд</a></li>
@@ -565,312 +565,325 @@ https://github.com/chibisov/backdoc
     <li><a href="#vhodnyie-parametryi-14">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-14">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#zagruzit-dizajn-cheka-0x17">Загрузить дизайн чека (0x17)</a>
+  <li><a href="#sformirovat-otchet-bez-gasheniya-x-otchet-0x20">Сформировать отчет без гашения (X-отчет) (0x20)</a>
   <ul>
     <li><a href="#opisanie-15">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-15">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-15">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#zagruzit-graficheskoe-izobrazhenie-0x18">Загрузить графическое изображение (0x18)</a>
+  <li><a href="#sformirovat-otchet-o-zakryitii-smenyi-0x21">Сформировать отчет о закрытии смены (0x21)</a>
   <ul>
     <li><a href="#opisanie-16">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-16">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-16">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#poisk-graficheskogo-izobrazheniya-0x19">Поиск графического изображения (0x19)</a>
+  <li><a href="#otkryit-smenu-0x23">Открыть смену (0x23)</a>
   <ul>
     <li><a href="#opisanie-17">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-17">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-17">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#sformirovat-otchet-bez-gasheniya-x-otchet-0x20">Сформировать отчет без гашения (X-отчет) (0x20)</a>
+  <li><a href="#ustanovit-dannyie-agenta-dlya-tovarnoj-pozitsii-0x25">Установить данные агента для товарной позиции (0x25)</a>
   <ul>
     <li><a href="#opisanie-18">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-18">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-18">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-4">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#sformirovat-otchet-o-zakryitii-smenyi-0x21">Сформировать отчет о закрытии смены (0x21)</a>
+  <li><a href="#otkryit-dokument-0x30">Открыть документ (0x30)</a>
   <ul>
     <li><a href="#opisanie-19">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-19">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-19">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-5">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#otkryit-smenu-0x23">Открыть смену (0x23)</a>
+  <li><a href="#zavershit-dokument-0x31">Завершить документ (0x31)</a>
   <ul>
     <li><a href="#opisanie-20">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-20">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-20">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-6">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#otkryit-dokument-0x30">Открыть документ (0x30)</a>
+  <li><a href="#annulirovat-dokument-0x32">Аннулировать документ (0x32)</a>
   <ul>
     <li><a href="#opisanie-21">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-21">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-21">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-4">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#zavershit-dokument-0x31">Завершить документ (0x31)</a>
+  <li><a href="#otlozhit-dokument-0x33">Отложить документ (0x33)</a>
   <ul>
     <li><a href="#opisanie-22">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-22">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-22">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-5">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#annulirovat-dokument-0x32">Аннулировать документ (0x32)</a>
+  <li><a href="#otrezat-dokument-0x34">Отрезать документ (0x34)</a>
   <ul>
     <li><a href="#opisanie-23">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-23">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-23">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#otlozhit-dokument-0x33">Отложить документ (0x33)</a>
+  <li><a href="#pechat-teksta-0x40">Печать текста (0x40)</a>
   <ul>
     <li><a href="#opisanie-24">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-24">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-24">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-7">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#otrezat-dokument-0x34">Отрезать документ (0x34)</a>
+  <li><a href="#pechatat-shtrih-kod-0x41">Печатать штрих-код (0x41)</a>
   <ul>
     <li><a href="#opisanie-25">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-25">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-25">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-8">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechat-teksta-0x40">Печать текста (0x40)</a>
+  <li><a href="#dobavit-tovarnuyu-pozitsiyu-0x42">Добавить товарную позицию (0x42)</a>
   <ul>
     <li><a href="#opisanie-26">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-26">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-26">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-6">Дополнительная информация</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-9">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechatat-shtrih-kod-0x41">Печатать штрих-код (0x41)</a>
+  <li><a href="#podyitog-0x44">Подытог (0x44)</a>
   <ul>
     <li><a href="#opisanie-27">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-27">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-27">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-7">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#dobavit-tovarnuyu-pozitsiyu-0x42">Добавить товарную позицию (0x42)</a>
+  <li><a href="#skidka-na-chek-0x45">Скидка на чек (0x45)</a>
   <ul>
     <li><a href="#opisanie-28">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-28">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-28">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-8">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#podyitog-0x44">Подытог (0x44)</a>
+  <li><a href="#oplata-0x47">Оплата (0x47)</a>
   <ul>
     <li><a href="#opisanie-29">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-29">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-29">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#skidka-na-chek-0x45">Скидка на чек (0x45)</a>
+  <li><a href="#vnesenie-izyatie-summyi-0x48">Внесение / изъятие суммы (0x48)</a>
   <ul>
     <li><a href="#opisanie-30">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-30">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-30">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#oplata-0x47">Оплата (0x47)</a>
+  <li><a href="#pechat-rekvizita-0x49">Печать реквизита (0x49)</a>
   <ul>
     <li><a href="#opisanie-31">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-31">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-31">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-10">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#vnesenie-izyatie-summyi-0x48">Внесение / изъятие суммы (0x48)</a>
+  <li><a href="#zaregistrirovat-summu-po-otdelu-0x50">Зарегистрировать сумму по отделу (0x50)</a>
   <ul>
     <li><a href="#opisanie-32">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-32">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-32">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#pechat-rekvizita-0x49">Печать реквизита (0x49)</a>
+  <li><a href="#sravnit-summu-po-cheku-0x52">Сравнить сумму по чеку(0x52)</a>
   <ul>
     <li><a href="#opisanie-33">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-33">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-33">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-9">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#zaregistrirovat-summu-po-otdelu-0x50">Зарегистрировать сумму по отделу (0x50)</a>
+  <li><a href="#otkryit-kopiyu-cheka-0x53">Открыть копию чека (0x53)</a>
   <ul>
     <li><a href="#opisanie-34">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-34">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-34">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-11">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#sravnit-summu-po-cheku-0x52">Сравнить сумму по чеку(0x52)</a>
+  <li><a href="#obnulit-nalichnyie-v-denezhnom-yaschike-0x54">Обнулить наличные в денежном ящике (0x54)</a>
   <ul>
     <li><a href="#opisanie-35">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-35">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-35">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#otkryit-kopiyu-cheka-0x53">Открыть копию чека (0x53)</a>
+  <li><a href="#pechat-grafiki-v-dokumente-0x55">Печать графики в документе (0x55)</a>
   <ul>
     <li><a href="#opisanie-36">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-36">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-36">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-10">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#obnulit-nalichnyie-v-denezhnom-yaschike-0x54">Обнулить наличные в денежном ящике (0x54)</a>
+  <li><a href="#pechat-rekvizita-dlya-ofd-0x57">Печать реквизита для ОФД (0x57)</a>
   <ul>
     <li><a href="#opisanie-37">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-37">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-37">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-12">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechat-grafiki-v-dokumente-0x55">Печать графики в документе (0x55)</a>
+  <li><a href="#pechat-cheka-korrektsii-0x58">Печать чека коррекции (0x58)</a>
   <ul>
     <li><a href="#opisanie-38">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-38">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-38">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-13">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechat-zagruzhennoj-kartinki-0x56">Печать загруженной картинки (0x56)</a>
+  <li><a href="#pechat-otcheta-o-tekuschem-sostoyanii-raschetov-0x59">Печать отчета о текущем состоянии расчетов (0x59)</a>
   <ul>
     <li><a href="#opisanie-39">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-39">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-39">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#pechat-rekvizita-dlya-ofd-0x57">Печать реквизита для ОФД (0x57)</a>
+  <li><a href="#registratsiya-pereregistratsiya-0x60">Регистрация / перерегистрация (0x60)</a>
   <ul>
     <li><a href="#opisanie-40">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-40">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-40">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-11">Дополнительная информация</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-14">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechat-cheka-korrektsii-0x58">Печать чека коррекции (0x58)</a>
+  <li><a href="#tehnologicheskoe-obnulenie-0x63">Технологическое обнуление (0x63)</a>
   <ul>
     <li><a href="#opisanie-41">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-41">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-41">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-12">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechat-otcheta-o-tekuschem-sostoyanii-raschetov-0x59">Печать отчета о текущем состоянии расчетов (0x59)</a>
+  <li><a href="#ustanovit-itog-cheka-0x64">Установить итог чека (0x64)</a>
   <ul>
     <li><a href="#opisanie-42">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-42">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-42">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#registratsiya-pereregistratsiya-0x60">Регистрация / перерегистрация (0x60)</a>
+  <li><a href="#zakryitie-fn-0x71">Закрытие ФН (0x71)</a>
   <ul>
     <li><a href="#opisanie-43">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-43">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-43">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-13">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#tehnologicheskoe-obnulenie-0x63">Технологическое обнуление (0x63)</a>
+  <li><a href="#raspechatat-dokument-iz-fn-0x73">Распечатать документ из ФН (0x73)</a>
   <ul>
     <li><a href="#opisanie-44">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-44">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-44">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#ustanovit-itog-cheka-0x64">Установить итог чека (0x64)</a>
+  <li><a href="#obmen-informatsiej-s-fn-0x78">Обмен информацией с ФН (0x78)</a>
   <ul>
     <li><a href="#opisanie-45">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-45">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-45">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-15">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#zakryitie-fn-0x71">Закрытие ФН (0x71)</a>
+  <li><a href="#otkryit-denezhnyij-yaschik-0x80">Открыть денежный ящик (0x80)</a>
   <ul>
     <li><a href="#opisanie-46">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-46">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-46">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dokument-iz-fn-0x73">Распечатать документ из ФН (0x73)</a>
+  <li><a href="#poluchit-status-denezhnogo-yaschika-0x81">Получить статус денежного ящика (0x81)</a>
   <ul>
     <li><a href="#opisanie-47">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-47">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-47">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#obmen-informatsiej-s-fn-0x78">Обмен информацией с ФН (0x78)</a>
+  <li><a href="#podat-zvukovoj-signal-0x82">Подать звуковой сигнал (0x82)</a>
   <ul>
     <li><a href="#opisanie-48">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-48">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-48">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-14">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#otkryit-denezhnyij-yaschik-0x80">Открыть денежный ящик (0x80)</a>
+  <li><a href="#chtenie-bloka-pamyati-kkt-0x91">Чтение блока памяти ККТ (0x91)</a>
   <ul>
     <li><a href="#opisanie-49">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-49">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-49">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#poluchit-status-denezhnogo-yaschika-0x81">Получить статус денежного ящика (0x81)</a>
+  <li><a href="#ustanovit-skorost-obmena-0x93">Установить скорость обмена (0x93)</a>
   <ul>
     <li><a href="#opisanie-50">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-50">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-50">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-16">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#podat-zvukovoj-signal-0x82">Подать звуковой сигнал (0x82)</a>
+  <li><a href="#raspechatat-servisnyie-dannyie-0x94">Распечатать сервисные данные (0x94)</a>
   <ul>
     <li><a href="#opisanie-51">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-51">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-51">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#chtenie-bloka-pamyati-kkt-0x91">Чтение блока памяти ККТ (0x91)</a>
+  <li><a href="#poluchit-tekuschij-url-servera-ofd-0x9e">Получить текущий URL сервера ОФД (0x9E)</a>
   <ul>
     <li><a href="#opisanie-52">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-52">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-52">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#ustanovit-skorost-obmena-0x93">Установить скорость обмена (0x93)</a>
+  <li><a href="#ustanovit-url-servera-ofd-0x9f">Установить URL сервера ОФД (0x9F)</a>
   <ul>
     <li><a href="#opisanie-53">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-53">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-53">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-15">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#raspechatat-servisnyie-dannyie-0x94">Распечатать сервисные данные (0x94)</a>
+  <li><a href="#avarijnoe-zakryitie-smenyi-0xa0">Аварийное закрытие смены (0xA0)</a>
   <ul>
     <li><a href="#opisanie-54">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-54">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-54">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#poluchit-tekuschij-url-servera-ofd-0x9e">Получить текущий URL сервера ОФД (0x9E)</a>
+  <li><a href="#pechat-kopii-poslednego-otcheta-o-zakryitii-smenyi-0xa1">Печать копии последнего отчета о закрытии смены(0xA1)</a>
   <ul>
     <li><a href="#opisanie-55">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-55">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-55">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#ustanovit-url-servera-ofd-0x9f">Установить URL сервера ОФД (0x9F)</a>
+  <li><a href="#pechat-kopii-cheka-registratsii-pereregistratsii-0xa3">Печать копии чека регистрации/перерегистрации (0xA3)</a>
   <ul>
     <li><a href="#opisanie-56">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-56">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-56">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#avarijnoe-zakryitie-smenyi-0xa0">Аварийное закрытие смены (0xA0)</a>
+  <li><a href="#avarijnoe-zakryitie-fn-0xa4">Аварийное закрытие ФН (0xA4)</a>
   <ul>
     <li><a href="#opisanie-57">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-57">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-57">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#pechat-kopii-poslednego-otcheta-o-zakryitii-smenyi-0xa1">Печать копии последнего отчета о закрытии смены(0xA1)</a>
+  <li><a href="#proverka-dostupnosti-servera-ofd-0xa5">Проверка доступности сервера ОФД (0xA5)</a>
   <ul>
     <li><a href="#opisanie-58">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-58">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-58">Ответные параметры</a></li>
+    <li><a href="#dopolnitelnaya-informatsiya-17">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#pechat-kopii-cheka-registratsii-pereregistratsii-0xa3">Печать копии чека регистрации/перерегистрации (0xA3)</a>
+  <li><a href="#otpravit-dannyie-dlya-otchyota-cash-info-v-kabinet-0xa6">Отправить данные для отчёта cash_info в Кабинет (0xA6)</a>
   <ul>
     <li><a href="#opisanie-59">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-59">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-59">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#avarijnoe-zakryitie-fn-0xa4">Аварийное закрытие ФН (0xA4)</a>
+  <li><a href="#otpravit-dannyie-dlya-otchyota-register-v-kabinet-0xa7">Отправить данные для отчёта register в Кабинет(0xA7)</a>
   <ul>
     <li><a href="#opisanie-60">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-60">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-60">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#proverka-dostupnosti-servera-ofd-0xa5">Проверка доступности сервера ОФД (0xA5)</a>
+  <li><a href="#ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</a>
   <ul>
     <li><a href="#opisanie-61">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-61">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-61">Ответные параметры</a></li>
-    <li><a href="#dopolnitelnaya-informatsiya-16">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#otpravit-dannyie-dlya-otchyota-cash-info-v-kabinet-0xa6">Отправить данные для отчёта cash_info в Кабинет (0xA6)</a>
+  <li><a href="#raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</a>
   <ul>
     <li><a href="#opisanie-62">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-62">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-62">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#otpravit-dannyie-dlya-otchyota-register-v-kabinet-0xa7">Отправить данные для отчёта register в Кабинет(0xA7)</a>
+  <li><a href="#raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</a>
   <ul>
     <li><a href="#opisanie-63">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-63">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-63">Ответные параметры</a></li>
+  </ul></li>
+  <li><a href="#raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</a>
+  <ul>
+    <li><a href="#opisanie-64">Описание</a></li>
+    <li><a href="#vhodnyie-parametryi-64">Входные параметры</a></li>
+    <li><a href="#otvetnyie-parametryi-64">Ответные параметры</a></li>
+  </ul></li>
+  <li><a href="#poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</a>
+  <ul>
+    <li><a href="#opisanie-65">Описание</a></li>
+    <li><a href="#vhodnyie-parametryi-65">Входные параметры</a></li>
+    <li><a href="#otvetnyie-parametryi-65">Ответные параметры</a></li>
   </ul></li>
   <li><a href="#nastrojki-kkt">Настройки ККТ</a>
   <ul>
@@ -882,7 +895,6 @@ https://github.com/chibisov/backdoc
     <li><a href="#6-upravlenie-raschetami-i-pechatyu-nalogov-bitovaya-maska">6 - Управление расчетами и печатью налогов (битовая маска)</a></li>
     <li><a href="#10-logicheskij-nomer-kkt">10 - Логический номер ККТ</a></li>
     <li><a href="#11-dopolnitelnaya-yachejka">11 - Дополнительная ячейка</a></li>
-    <li><a href="#12-nastrojki-pu-massiv-1-3">12 - Настройки ПУ (Массив 1..3)</a></li>
     <li><a href="#20-parol-dlya-svyazi">20 - Пароль для связи</a></li>
     <li><a href="#30-naimenovanie-i-adres-organizatsii-massiv-0-3">30 - Наименование и адрес организации (Массив 0..3)</a></li>
     <li><a href="#31-stroki-okonchaniya-chekov-massiv-0-4">31 - Строки окончания чеков (Массив 0..4)</a></li>
@@ -918,7 +930,7 @@ https://github.com/chibisov/backdoc
 
     </div>
     <div class="main_container">
-        <h1 id="instruktsiya-po-programmirovaniyu-kkt-pirit-2f-ffd-1-05">Инструкция по программированию ККТ Пирит 2Ф ФФД 1.05</h1>
+        <h1 id="instruktsiya-po-programmirovaniyu-fm16-ffd-1-1">Инструкция по программированию FM16 ФФД 1.1</h1>
 
 <h1 id="opisanie-protokola">Описание протокола</h1>
 
@@ -1120,6 +1132,10 @@ https://github.com/chibisov/backdoc
   <td>7</td>
   <td>Зарезервировано</td>
 </tr>
+<tr>
+  <td>8</td>
+  <td>SD карта отсутствует или неисправна</td>
+</tr>
 </tbody>
 </table>
 
@@ -1170,6 +1186,10 @@ https://github.com/chibisov/backdoc
 <tr>
   <td>8</td>
   <td>Не было завершено закрытие смены, необходимо повторить операцию</td>
+</tr>
+<tr>
+  <td>9</td>
+  <td>Ошибка контрольной ленты</td>
 </tr>
 </tbody>
 </table>
@@ -1411,8 +1431,8 @@ https://github.com/chibisov/backdoc
 <tr>
   <td>18</td>
   <td>Вернуть данные по коррекциям</td>
-  <td>Целое число, Дробное число * 2</td>
-  <td>Количество коррекций, Суммы коррекций наличными и безналичными</td>
+  <td>Целое число, Дробное число * 5</td>
+  <td>Количество коррекций, Суммы коррекций наличными, безналичными, авансом, кредитом, иной формой оплаты</td>
 </tr>
 </tbody>
 </table>
@@ -1521,8 +1541,8 @@ https://github.com/chibisov/backdoc
 <tr>
   <td>14</td>
   <td>Вернуть дату окончания временного ресурса ФН</td>
-  <td>Дата</td>
-  <td></td>
+  <td>Дата, Целое число</td>
+  <td>Дата окончания, количество дней до окончания временного ресурса ФН</td>
 </tr>
 <tr>
   <td>15</td>
@@ -1543,10 +1563,34 @@ https://github.com/chibisov/backdoc
   <td></td>
 </tr>
 <tr>
+  <td>18</td>
+  <td>Вернуть количество символов в строке</td>
+  <td>Целое число</td>
+  <td>Для этого запроса можно вводить дополнительный входной параметр – номер шрифта. По умолчанию номер шрифта = 0</td>
+</tr>
+<tr>
+  <td>19</td>
+  <td>Вернуть содержание регистра CID SD карты</td>
+  <td>Строка</td>
+  <td>Возвращается 16 байт регистра CID в HEX виде, начиная со старшего</td>
+</tr>
+<tr>
+  <td>20</td>
+  <td>Вернуть содержание регистра CSD SD карты</td>
+  <td>Строка</td>
+  <td>Возвращается 16 байт регистра CSD в HEX виде, начиная со старшего</td>
+</tr>
+<tr>
   <td>21</td>
   <td>Вернуть модель устройства</td>
   <td>Целое число</td>
   <td></td>
+</tr>
+<tr>
+  <td>22</td>
+  <td>Вернуть битовую маску поддерживаемых интерфейсов и устройств. Если бит установлен - интерфейс или устройство может быть использовано</td>
+  <td>Целое число</td>
+  <td>Бит 0 - Зарезервирован, Бит 1 - Зарезервирован, Бит 2 - Наличие SD, Бит 3 - Наличие ФН</td>
 </tr>
 <tr>
   <td>23</td>
@@ -1700,58 +1744,28 @@ https://github.com/chibisov/backdoc
 </thead>
 <tbody>
 <tr>
-  <td>1</td>
-  <td>Вернуть напряжение питания (мВ) Целое число</td>
-  <td>Возвращается значение в милливольтах</td>
-  <td></td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>Вернуть температуру термоголовки</td>
-  <td>Целое число</td>
-  <td>Возвращается значение в  градусах</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>Вернуть количество отрезов резчика</td>
-  <td>Целое число</td>
-  <td></td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>Вернуть ресурс термоголовки</td>
-  <td>Целое число</td>
-  <td>Возвращается значение в  мм</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>Обнулить количество отрезов резчика</td>
-  <td>-</td>
-  <td></td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>Обнулить ресурс термоголовки</td>
-  <td>-</td>
-  <td></td>
-</tr>
-<tr>
   <td>7</td>
   <td>Вернуть напряжение на батарейке (мВ)</td>
   <td>Целое число</td>
   <td>Возвращается значение в милливольтах</td>
 </tr>
 <tr>
-  <td>8</td>
-  <td>Вернуть количество отрезов резчика (необнуляемое)</td>
-  <td>Целое число</td>
+  <td>10</td>
+  <td>Вернуть тип ПУ</td>
+  <td>Строка</td>
   <td></td>
 </tr>
 <tr>
-  <td>9</td>
-  <td>Вернуть ресурс термоголовки (необнуляемый)</td>
-  <td>Целое число</td>
-  <td>Возвращается значение в  мм</td>
+  <td>11</td>
+  <td>Вернуть версию BIOS ПУ</td>
+  <td>Строка</td>
+  <td></td>
+</tr>
+<tr>
+  <td>12</td>
+  <td>Вернуть серийный номер ПУ</td>
+  <td>Строка</td>
+  <td></td>
 </tr>
 </tbody>
 </table>
@@ -2125,115 +2139,126 @@ https://github.com/chibisov/backdoc
 
 <p>Нет</p>
 
-<h1 id="zagruzit-dizajn-cheka-0x17">Загрузить дизайн чека (0x17)</h1>
+<h1 id="sformirovat-otchet-bez-gasheniya-x-otchet-0x20">Сформировать отчет без гашения (X-отчет) (0x20)</h1>
 
 <h2 id="opisanie-15">Описание</h2>
 
-<p>Функция используется для загрузки файла дизайнов чека.
-Команда выполняется в два этапа. На первом передается количество байт в файле дизайнов. Если команда выполнена успешно, ККТ присылает байт с кодом 0x06 (ACK), что обозначает готовность ККТ к приему файла, либо стандартный ответ с кодом ошибки. На втором этапе передается сам файл, после загрузки которого возвращается стандартный ответ с кодом ошибки.</p>
-
-<h2 id="vhodnyie-parametryi-15">Входные параметры</h2>
-
-<p>(Целое число) Количество байт</p>
-
-<h2 id="otvetnyie-parametryi-15">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="zagruzit-graficheskoe-izobrazhenie-0x18">Загрузить графическое изображение (0x18)</h1>
-
-<h2 id="opisanie-16">Описание</h2>
-
-<p>Максимальная ширина изображения при использовании бумаги шириной 80мм – 512 точек(64 мм).  Максимальный размер – 22000 байт. Максимальная ширина изображения при использовании бумаги шириной 57мм – 336 точек точек(42 мм). 176 точек слева должны быть без изображения(как показано на рис. 1).</p>
-
-<p>Графика печатается прижатой к левому краю, вне зоны печати фискального логотипа. Если параметр смещение равен 0, картинка прижимается влево. Если параметр смещение равен 1, картинка выравнивается по центру. Если параметр смещение равен 2, картинка прижимается к правой границе зоны печати графики(512 точек).</p>
-
-<p>Команда выполняется в два этапа. На первом передается параметры графики для печати.  В ответ ККТ присылает байт с кодом 0x06 (ACK), что обозначает готовность ККТ к приему графического изображения, либо стандартный ответ с кодом ошибки. На втором этапе передается само графическое изображение, после печати которого возвращается стандартный ответ с кодом ошибки.</p>
-
-<h2 id="vhodnyie-parametryi-16">Входные параметры</h2>
-
-<ul>
-<li>(Целое число) Ширина картинки</li>
-<li>(Целое число) Высота картинки</li>
-<li>(Целое число) Смещение по умолчанию</li>
-<li>(Строка)[1..15] – идентификатор картинки</li>
-<li>(Целое число) Номер.</li>
-</ul>
-
-<h2 id="otvetnyie-parametryi-16">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="poisk-graficheskogo-izobrazheniya-0x19">Поиск графического изображения (0x19)</h1>
-
-<h2 id="opisanie-17">Описание</h2>
-
-<p>Функция используется поиска и проверки загруженного графического изображения в памяти устройства.</p>
-
-<h2 id="vhodnyie-parametryi-17">Входные параметры</h2>
-
-<ul>
-<li>(Строка)[1..15] – идентификатор картинки, передаваемый в команде 0x18.</li>
-</ul>
-
-<h2 id="otvetnyie-parametryi-17">Ответные параметры</h2>
-
-<ul>
-<li>(Целое число) Номер. Если  идентификатор не найден, возвращается 0, если найден 1</li>
-</ul>
-
-<h1 id="sformirovat-otchet-bez-gasheniya-x-otchet-0x20">Сформировать отчет без гашения (X-отчет) (0x20)</h1>
-
-<h2 id="opisanie-18">Описание</h2>
-
 <p>Сформировать отчет без гашения (X-отчет). Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.</p>
 
-<h2 id="vhodnyie-parametryi-18">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-15">Входные параметры</h2>
 
 <ul>
 <li>(Имя оператора) Имя оператора</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-18">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-15">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="sformirovat-otchet-o-zakryitii-smenyi-0x21">Сформировать отчет о закрытии смены (0x21)</h1>
 
-<h2 id="opisanie-19">Описание</h2>
+<h2 id="opisanie-16">Описание</h2>
 
 <p>Сформировать отчет о закрытии смены. Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.</p>
 
-<h2 id="vhodnyie-parametryi-19">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-16">Входные параметры</h2>
 
 <ul>
 <li>(Имя оператора) Имя оператора</li>
 <li>(Целое число) Опции отчета</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-19">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-16">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="otkryit-smenu-0x23">Открыть смену (0x23)</h1>
 
-<h2 id="opisanie-20">Описание</h2>
+<h2 id="opisanie-17">Описание</h2>
 
 <p>Открыть смену. Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.</p>
 
-<h2 id="vhodnyie-parametryi-20">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-17">Входные параметры</h2>
 
 <ul>
 <li>(Имя оператора) Имя оператора</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-20">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-17">Ответные параметры</h2>
 
 <p>Нет</p>
 
+<h1 id="ustanovit-dannyie-agenta-dlya-tovarnoj-pozitsii-0x25">Установить данные агента для товарной позиции (0x25)</h1>
+
+<h2 id="opisanie-18">Описание</h2>
+
+<p>Команда вызывается перед передачей товарной позиции и устанавливает данные агента. Действие команды распространяется на одну товарную позицию до закрытия документа.</p>
+
+<h2 id="vhodnyie-parametryi-18">Входные параметры</h2>
+
+<ul>
+<li>(Целое число) Признак агента по предмету расчета</li>
+<li>(Строка)[0..12] ИНН поставщика</li>
+<li>(Строка)[0..19] Телефон поставщика</li>
+<li>(Строка)[0..256] Адрес оператора перевода (для банк.пл.агента/банк.пл.субагента, иначе пустой)</li>
+<li>(Строка)[0..12] ИНН оператора перевода (для банк.пл.агента/банк.пл.субагента, иначе пустой)</li>
+<li>(Строка)[0..64] Наименование оператора перевода (для банк.пл.агента/банк.пл.субагента, иначе пустой)</li>
+<li>(Строка)[0..19] Телефон оператора перевода (для банк.пл.агента/банк.пл.субагента, иначе пустой)</li>
+<li>(Строка)[0..24] Операция платежного агента (для банк.пл.агента/банк.пл.субагента, иначе пустой)</li>
+<li>(Строка)[0..19] Телефон платежного агента (для пл.агента/пл.субагента, иначе пустой)</li>
+<li>(Строка)[0..19] Телефон оператора по приему платежей (для пл.агента/пл.субагента, иначе пустой)</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-18">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="dopolnitelnaya-informatsiya-4">Дополнительная информация</h2>
+
+<p><strong>Признак агента по предмету расчета - битовая маска</strong></p>
+
+<table>
+<thead>
+<tr>
+  <th>Номер бита</th>
+  <th>Пояснение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>0</td>
+  <td>Банковский платежный агент</td>
+</tr>
+<tr>
+  <td>1</td>
+  <td>Банковский платежный субагент</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Платежный агент</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Платежный субагент</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Поверенный</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>Агент</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>Комиссионер</td>
+</tr>
+</tbody>
+</table>
+
 <h1 id="otkryit-dokument-0x30">Открыть документ (0x30)</h1>
 
-<h2 id="opisanie-21">Описание</h2>
+<h2 id="opisanie-19">Описание</h2>
 
 <p>Эта команда открывает новый документ и переводит ККТ в режим ввода документа.</p>
 
@@ -2244,7 +2269,7 @@ https://github.com/chibisov/backdoc
 <p>В пакетном режиме формирования документа, при успешном выполнении команд формирования чека (с кодами 40..49,52), ответ на команду не посылается. Если какая-либо команда выполняется с ошибкой, то на нее возвращается стандартный ответ с кодом ошибки и последующие команды формирования чека (с кодами 40..49,52) игнорируются до команд “Завершить документ” или “Аннулировать документ”. Такой документ должен быть аннулирован или повторен, начиная с команды вернувшей ошибку в обычном режиме формирования документа, после подачи команды "Завершить документ".
 Параметр Номер документа учитывается при установке бита в таблице настроек ККТ "Нумерация чеков со стороны внешней программы" в значение "1". В других ситуациях параметр игнорируется. Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.</p>
 
-<h2 id="vhodnyie-parametryi-21">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-19">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Режим и тип документа</li>
@@ -2254,11 +2279,11 @@ https://github.com/chibisov/backdoc
 <li>(Число 0..5) Система налогообложения</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-21">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-19">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-4">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-5">Дополнительная информация</h2>
 
 <p><strong>Режим и тип документа</strong></p>
 
@@ -2324,7 +2349,7 @@ https://github.com/chibisov/backdoc
 
 <h1 id="zavershit-dokument-0x31">Завершить документ (0x31)</h1>
 
-<h2 id="opisanie-22">Описание</h2>
+<h2 id="opisanie-20">Описание</h2>
 
 <p>Команда завершения документа.</p>
 
@@ -2333,7 +2358,7 @@ https://github.com/chibisov/backdoc
 <p>Фискальный признак возвращается только при завершении чеков на приход, возврат прихода, расход и возврат расхода. 
 В пакетном режиме формирования документа, команда “Завершить документ” выключает пакетный режим. Если в пакетном режиме ошибка возникла ранее команды “Завершить документ”, то ответ команду “Завершить документ” не возвращается. Можно продолжить формирование документа, начиная с команды вернувшей ошибку, обычном режиме.</p>
 
-<h2 id="vhodnyie-parametryi-22">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-20">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Флаг отрезки</li>
@@ -2341,7 +2366,7 @@ https://github.com/chibisov/backdoc
 <li>(Число) Разные флаги</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-22">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-20">Ответные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер фискального документа</li>
@@ -2349,7 +2374,7 @@ https://github.com/chibisov/backdoc
 <li>(Строка) Фискальный признак</li>
 </ul>
 
-<h2 id="dopolnitelnaya-informatsiya-5">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-6">Дополнительная информация</h2>
 
 <p><strong>Разные флаги</strong></p>
 
@@ -2370,9 +2395,41 @@ https://github.com/chibisov/backdoc
 
 <h1 id="annulirovat-dokument-0x32">Аннулировать документ (0x32)</h1>
 
-<h2 id="opisanie-23">Описание</h2>
+<h2 id="opisanie-21">Описание</h2>
 
 <p>Эта команда прерывает формирование текущего документа, данные удаляются из оперативной памяти ККТ и печатается сообщение об аннулировании.</p>
+
+<h2 id="vhodnyie-parametryi-21">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-21">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="otlozhit-dokument-0x33">Отложить документ (0x33)</h1>
+
+<h2 id="opisanie-22">Описание</h2>
+
+<p>Эта команда работает аналогично команде “Аннулировать документ”, но подается в случаях, когда документ отменяется не навсегда, а будет обязательно повторно введен, в течении данной смены. Данные документа удаляются из оперативной памяти ККТ и печатается причина отказа от чека.</p>
+
+<p>Используя параметры печати отчета о закрытии смены в “Таблица настроек ККТ”, можно настроить в отчете о закрытии печать информации по отложенным за смену чекам. При этом, если команда "Отложить чек" выполняется без параметра(пустая строка), то такие чеки учитываются в отчете о закрытии, если с параметром – не учитываются.</p>
+
+<h2 id="vhodnyie-parametryi-22">Входные параметры</h2>
+
+<ul>
+<li>(Строка[0..40]) Причина отказа от чека</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-22">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="otrezat-dokument-0x34">Отрезать документ (0x34)</h1>
+
+<h2 id="opisanie-23">Описание</h2>
+
+<p>Эта команда выполняет принудительную отрезку документа с предпечатью.</p>
 
 <h2 id="vhodnyie-parametryi-23">Входные параметры</h2>
 
@@ -2382,56 +2439,24 @@ https://github.com/chibisov/backdoc
 
 <p>Нет</p>
 
-<h1 id="otlozhit-dokument-0x33">Отложить документ (0x33)</h1>
+<h1 id="pechat-teksta-0x40">Печать текста (0x40)</h1>
 
 <h2 id="opisanie-24">Описание</h2>
 
-<p>Эта команда работает аналогично команде “Аннулировать документ”, но подается в случаях, когда документ отменяется не навсегда, а будет обязательно повторно введен, в течении данной смены. Данные документа удаляются из оперативной памяти ККТ и печатается причина отказа от чека.</p>
-
-<p>Используя параметры печати отчета о закрытии смены в “Таблица настроек ККТ”, можно настроить в отчете о закрытии печать информации по отложенным за смену чекам. При этом, если команда "Отложить чек" выполняется без параметра(пустая строка), то такие чеки учитываются в отчете о закрытии, если с параметром – не учитываются.</p>
-
-<h2 id="vhodnyie-parametryi-24">Входные параметры</h2>
-
-<ul>
-<li>(Строка[0..40]) Причина отказа от чека</li>
-</ul>
-
-<h2 id="otvetnyie-parametryi-24">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="otrezat-dokument-0x34">Отрезать документ (0x34)</h1>
-
-<h2 id="opisanie-25">Описание</h2>
-
-<p>Эта команда выполняет принудительную отрезку документа с предпечатью.</p>
-
-<h2 id="vhodnyie-parametryi-25">Входные параметры</h2>
-
-<p>Нет</p>
-
-<h2 id="otvetnyie-parametryi-25">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="pechat-teksta-0x40">Печать текста (0x40)</h1>
-
-<h2 id="opisanie-26">Описание</h2>
-
 <p>C помощью данной команды печатается текст внутри открытого сервисного документа.</p>
 
-<h2 id="vhodnyie-parametryi-26">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-24">Входные параметры</h2>
 
 <ul>
 <li>(Строка[1..72]) Текст</li>
 <li>(Целое число) Атрибуты текста</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-26">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-24">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-6">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-7">Дополнительная информация</h2>
 
 <p>Атрибуты текста – опциональный параметр, представляющий собой битовую маску.</p>
 
@@ -2449,31 +2474,11 @@ https://github.com/chibisov/backdoc
 <tbody>
 <tr>
   <td>0</td>
-  <td>Шрифт 13х24, 44 символа в строке</td>
+  <td>Шрифт 12х24</td>
 </tr>
 <tr>
   <td>1</td>
-  <td>Шрифт 10х20</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>Шрифт 13х24 жирный</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>Шрифт 10х20 жирный</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>Шрифт 8х14, 56 символов в строке</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>Шрифт 24х45</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>Шрифт 24х45 жирный</td>
+  <td>Шрифт 9х17</td>
 </tr>
 </tbody>
 </table>
@@ -2485,11 +2490,11 @@ https://github.com/chibisov/backdoc
 
 <h1 id="pechatat-shtrih-kod-0x41">Печатать штрих-код (0x41)</h1>
 
-<h2 id="opisanie-27">Описание</h2>
+<h2 id="opisanie-25">Описание</h2>
 
 <p>С помощью данной команды можно распечатать штрих-код товара.</p>
 
-<h2 id="vhodnyie-parametryi-27">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-25">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Опции вывода</li>
@@ -2499,11 +2504,11 @@ https://github.com/chibisov/backdoc
 <li>(Строка) Штрих-код</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-27">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-25">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-7">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-8">Дополнительная информация</h2>
 
 <p>Опции вывода(для линейных кодов):</p>
 
@@ -2599,7 +2604,7 @@ https://github.com/chibisov/backdoc
 
 <h1 id="dobavit-tovarnuyu-pozitsiyu-0x42">Добавить товарную позицию (0x42)</h1>
 
-<h2 id="opisanie-28">Описание</h2>
+<h2 id="opisanie-26">Описание</h2>
 
 <p>Эта команда может быть вызвана сразу после открытия чека и может повторяться любое количество раз (если признак способа расчета не равен 7) внутри текущего документа для отражения всего списка товаров. Если позиция не может быть добавлена в ФН, на чеке после данных о позиции печатается строка “ОПЕРАЦИЯ ОТМЕНЕНА” и возвращается соответствующий код ошибки ФН.</p>
 
@@ -2614,7 +2619,7 @@ https://github.com/chibisov/backdoc
 
 <p>В связи с требованиями ФФД поле "Название товара" при длине, большей 128 символов, будет обрезано до 128 символов.</p>
 
-<h2 id="vhodnyie-parametryi-28">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-26">Входные параметры</h2>
 
 <ul>
 <li>(Строка[0...224]) Название товара</li>
@@ -2631,13 +2636,13 @@ https://github.com/chibisov/backdoc
 <li>(Целое число) Признак предмета расчета</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-28">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-26">Ответные параметры</h2>
 
 <ul>
 <li>(Дробное число) Сумма налога в рублях, с точностью до 4 знаков после запятой (лишние знаки передаются КП для корректного округления до копеек)</li>
 </ul>
 
-<h2 id="dopolnitelnaya-informatsiya-8">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-9">Дополнительная информация</h2>
 
 <p>Признак способа расчета:</p>
 
@@ -2747,28 +2752,28 @@ https://github.com/chibisov/backdoc
 
 <h1 id="podyitog-0x44">Подытог (0x44)</h1>
 
-<h2 id="opisanie-29">Описание</h2>
+<h2 id="opisanie-27">Описание</h2>
 
 <p>Эта команда печатает промежуточный итог в чеке.</p>
 
 <p>После повторной команды «Подытог», документ переходит в состояние оплаты. Далее мы можем распечатать дополнительные реквизиты, прервать оформление чека командами «Отложить чек» и «Аннулировать чек», либо продолжить оформление документа, выполнив команду «Оплата» и команду «Завершить документ».</p>
 
-<h2 id="vhodnyie-parametryi-29">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-27">Входные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="otvetnyie-parametryi-29">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-27">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="skidka-na-chek-0x45">Скидка на чек (0x45)</h1>
 
-<h2 id="opisanie-30">Описание</h2>
+<h2 id="opisanie-28">Описание</h2>
 
 <p>Данная команда позволяет устанавливать абсолютные скидки на весь чек. Команда может быть вызвана после первой команды “Подытог” только один раз, при этом необходимо помнить, что итоговая сумма после применения скидки не должна быть отрицательной.
 Доступен только один тип скидки: скидка на сумму (тип скидки = 1), при этом размер скидки не может превышать 99 копеек</p>
 
-<h2 id="vhodnyie-parametryi-30">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-28">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Тип скидки</li>
@@ -2776,13 +2781,13 @@ https://github.com/chibisov/backdoc
 <li>(Дробное число) Сумма скидки.</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-30">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-28">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="oplata-0x47">Оплата (0x47)</h1>
 
-<h2 id="opisanie-31">Описание</h2>
+<h2 id="opisanie-29">Описание</h2>
 
 <p>С помощью этой команды производится фиксирование всех взаиморасчетов с клиентом с указанием сумм и типов оплаты. При первом использовании этой команды в чеке печатается «Итоговая сумма», что является окончательной суммой чека.</p>
 
@@ -2790,7 +2795,7 @@ https://github.com/chibisov/backdoc
 
 <p>Код типа платежа должен соответствовать одному из запрограммированных средств оплаты в “Таблице настроек ККТ”.</p>
 
-<h2 id="vhodnyie-parametryi-31">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-29">Входные параметры</h2>
 
 <ul>
 <li>(Целое число 0..15) Код типа платежа</li>
@@ -2798,32 +2803,32 @@ https://github.com/chibisov/backdoc
 <li>(Строка[0..40]) Дополнительный текст</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-31">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-29">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="vnesenie-izyatie-summyi-0x48">Внесение / изъятие суммы (0x48)</h1>
 
-<h2 id="opisanie-32">Описание</h2>
+<h2 id="opisanie-30">Описание</h2>
 
 <p>Команда регистрирует внесение или изъятие суммы денег из денежного ящика.</p>
 
 <p>Команда выполняется после команды “Открыть документ”. Если производится внесение денег, тип документа должен быть 4, если изъятие - 5. При этом может быть напечатана информация о купюрах, которые были использованы при выполнении данной операции.</p>
 
-<h2 id="vhodnyie-parametryi-32">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-30">Входные параметры</h2>
 
 <ul>
 <li>(Строка[0..40]) Название или тип купюры</li>
 <li>(Дробное число) Сумма</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-32">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-30">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="pechat-rekvizita-0x49">Печать реквизита (0x49)</h1>
 
-<h2 id="opisanie-33">Описание</h2>
+<h2 id="opisanie-31">Описание</h2>
 
 <p>C помощью данной команды могут печататься дополнительные реквизиты чека, при открытом чеке на продажу, возврат, внесения или изъятия.</p>
 
@@ -2833,7 +2838,7 @@ https://github.com/chibisov/backdoc
 
 <p>Если значение реквизита состоит из одной строки и первым символом является символ '&amp;', то перевод строки после печати данного реквизита не выполняется, можно на этой же строке начать печать следующего реквизита.</p>
 
-<h2 id="vhodnyie-parametryi-33">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-31">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Код реквизита</li>
@@ -2844,11 +2849,11 @@ https://github.com/chibisov/backdoc
 <li>(Строка[0..72]) Значение реквизита 4-я строка</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-33">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-31">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-9">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-10">Дополнительная информация</h2>
 
 <p>Атрибуты текста – опциональный параметр, представляющий собой битовую маску.</p>
 
@@ -2866,31 +2871,11 @@ https://github.com/chibisov/backdoc
 <tbody>
 <tr>
   <td>0</td>
-  <td>Шрифт 13х24, 44 символа в строке</td>
+  <td>Шрифт 12х24</td>
 </tr>
 <tr>
   <td>1</td>
-  <td>Шрифт 10х20</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>Шрифт 13х24 жирный</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>Шрифт 10х20 жирный</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>Шрифт 8х14, 56 символов в строке</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>Шрифт 24х45</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>Шрифт 24х45 жирный</td>
+  <td>Шрифт 9х17</td>
 </tr>
 </tbody>
 </table>
@@ -2902,14 +2887,14 @@ https://github.com/chibisov/backdoc
 
 <h1 id="zaregistrirovat-summu-po-otdelu-0x50">Зарегистрировать сумму по отделу (0x50)</h1>
 
-<h2 id="opisanie-34">Описание</h2>
+<h2 id="opisanie-32">Описание</h2>
 
 <p>Команда регистрирует сумму по указанному отделу для одного из типов операции продажа или возврат. Эта команда может быть вызвана после любой команды.
 Для печати итоговых сумм по отделам на отчете о закрытии смены необходимо запрограммировать заголовок группы отделов в “Таблице настроек ККТ”.</p>
 
 <p>Тип операции указывает, для какого типа операций регистрируется сумма по товарной группе:   0 – продажа,    1 – возврат</p>
 
-<h2 id="vhodnyie-parametryi-34">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-32">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Тип операции</li>
@@ -2917,29 +2902,29 @@ https://github.com/chibisov/backdoc
 <li>(Дробное число) Сумма</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-34">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-32">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="sravnit-summu-po-cheku-0x52">Сравнить сумму по чеку(0x52)</h1>
 
-<h2 id="opisanie-35">Описание</h2>
+<h2 id="opisanie-33">Описание</h2>
 
 <p>Команда сравнивает текущую сумму по чеку с переданной в параметре и возвращает ошибку “Некорректный формат или параметр команды”, если суммы не совпадают. Эта команда может быть вызвана после любой команды, если документ открыт.</p>
 
-<h2 id="vhodnyie-parametryi-35">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-33">Входные параметры</h2>
 
 <ul>
 <li>(Дробное число) Сумма для сравнения</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-35">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-33">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="otkryit-kopiyu-cheka-0x53">Открыть копию чека (0x53)</h1>
 
-<h2 id="opisanie-36">Описание</h2>
+<h2 id="opisanie-34">Описание</h2>
 
 <p>Эта команда открывает копию чека, как сервисный документ, с печатью необходимых реквизитов оригинала чека. Реквизиты оригинала чека передаются во входных параметрах команды. Для формирования тела копии доступны команды: “Печать текста”, “Добавить товарную позицию”, “Подытог”, “Оплата”.</p>
 
@@ -2947,7 +2932,7 @@ https://github.com/chibisov/backdoc
 
 <p>Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.</p>
 
-<h2 id="vhodnyie-parametryi-36">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-34">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Тип чека</li>
@@ -2961,11 +2946,11 @@ https://github.com/chibisov/backdoc
 <li>(Целое число 0..5) Система налогообложения</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-36">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-34">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-10">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-11">Дополнительная информация</h2>
 
 <p><strong>Тип чека</strong></p>
 
@@ -3035,21 +3020,21 @@ https://github.com/chibisov/backdoc
 
 <h1 id="obnulit-nalichnyie-v-denezhnom-yaschike-0x54">Обнулить наличные в денежном ящике (0x54)</h1>
 
-<h2 id="opisanie-37">Описание</h2>
+<h2 id="opisanie-35">Описание</h2>
 
 <p>Команда обнуляет счетчик наличных в денежном ящике.</p>
 
-<h2 id="vhodnyie-parametryi-37">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-35">Входные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="otvetnyie-parametryi-37">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-35">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="pechat-grafiki-v-dokumente-0x55">Печать графики в документе (0x55)</h1>
 
-<h2 id="opisanie-38">Описание</h2>
+<h2 id="opisanie-36">Описание</h2>
 
 <p>Максимальная ширина изображения при использовании бумаги шириной 80мм – 512 точек(64 мм).  Максимальный размер – 22000 байт. Максимальная ширина изображения при использовании бумаги шириной 57мм – 336 точек точек(42 мм). 176 точек слева должны быть без изображения(как показано на рис. 1).</p>
 
@@ -3057,7 +3042,7 @@ https://github.com/chibisov/backdoc
 
 <p>Команда выполняется в два этапа. На первом передается параметры графики для печати.  В ответ ККТ присылает байт с кодом 0x06 (ACK), что обозначает готовность ККТ к приему графического изображения, либо стандартный ответ с кодом ошибки. На втором этапе передается само графическое изображение, после печати которого возвращается стандартный ответ с кодом ошибки.</p>
 
-<h2 id="vhodnyie-parametryi-38">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-36">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Ширина картинки</li>
@@ -3065,32 +3050,13 @@ https://github.com/chibisov/backdoc
 <li>(Целое число) Смещение от левого края</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-38">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="pechat-zagruzhennoj-kartinki-0x56">Печать загруженной картинки (0x56)</h1>
-
-<h2 id="opisanie-39">Описание</h2>
-
-<p>Функция используется для печати графики загруженной ранее в память устройства командой “Загрузить графическое изображение (0x18)”.</p>
-
-<p>Если параметр смещение равен 0, картинка прижимается влево. Если параметр смещение равен 1, картинка выравнивается по центру. Если параметр смещение равен 2, картинка прижимается к правой границе зоны печати графики(512 точек). Если параметр смещение равен 3 – используется значение смещения, заданное при загрузке.</p>
-
-<h2 id="vhodnyie-parametryi-39">Входные параметры</h2>
-
-<ul>
-<li>(Целое число) Смещение</li>
-<li>(Целое число) Номер (всегда =1)</li>
-</ul>
-
-<h2 id="otvetnyie-parametryi-39">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-36">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="pechat-rekvizita-dlya-ofd-0x57">Печать реквизита для ОФД (0x57)</h1>
 
-<h2 id="opisanie-40">Описание</h2>
+<h2 id="opisanie-37">Описание</h2>
 
 <p>C помощью данной команды могут печататься дополнительные реквизиты чека для передачи в ОФД, при открытом чеке на продажу (приход), возврат (возврат прихода), внесения или изъятия. В ОФД будет отправлено только значение реквизита.</p>
 
@@ -3100,7 +3066,7 @@ https://github.com/chibisov/backdoc
 
 <p>Если при установленном бите 6 первым символом значения реквизита является '#', то атрибут рассматривается, как целое число, иначе - как денежная сумма.</p>
 
-<h2 id="vhodnyie-parametryi-40">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-37">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Код реквизита, допустимы значения:</li>
@@ -3159,11 +3125,11 @@ https://github.com/chibisov/backdoc
 <li>(Строка[0..255]) Значение реквизита</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-40">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-37">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-11">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-12">Дополнительная информация</h2>
 
 <p>Атрибуты текста – опциональный параметр, представляющий собой битовую маску.</p>
 
@@ -3181,31 +3147,11 @@ https://github.com/chibisov/backdoc
 <tbody>
 <tr>
   <td>0</td>
-  <td>Шрифт 13х24, 44 символа в строке</td>
+  <td>Шрифт 12х24</td>
 </tr>
 <tr>
   <td>1</td>
-  <td>Шрифт 10х20</td>
-</tr>
-<tr>
-  <td>2</td>
-  <td>Шрифт 13х24 жирный</td>
-</tr>
-<tr>
-  <td>3</td>
-  <td>Шрифт 10х20 жирный</td>
-</tr>
-<tr>
-  <td>4</td>
-  <td>Шрифт 8х14, 56 символов в строке</td>
-</tr>
-<tr>
-  <td>5</td>
-  <td>Шрифт 24х45</td>
-</tr>
-<tr>
-  <td>6</td>
-  <td>Шрифт 24х45 жирный</td>
+  <td>Шрифт 9х17</td>
 </tr>
 </tbody>
 </table>
@@ -3217,11 +3163,11 @@ https://github.com/chibisov/backdoc
 
 <h1 id="pechat-cheka-korrektsii-0x58">Печать чека коррекции (0x58)</h1>
 
-<h2 id="opisanie-41">Описание</h2>
+<h2 id="opisanie-38">Описание</h2>
 
 <p>Команда формирует чек коррекции с записью в ФН. Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.</p>
 
-<h2 id="vhodnyie-parametryi-41">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-38">Входные параметры</h2>
 
 <ul>
 <li>(Имя оператора) Имя оператора</li>
@@ -3242,11 +3188,11 @@ https://github.com/chibisov/backdoc
 <li>(Дробное число) Сумма расчета по расч. ставке 10/110</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-41">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-38">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-12">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-13">Дополнительная информация</h2>
 
 <p><strong>Тип коррекции</strong></p>
 
@@ -3316,24 +3262,24 @@ https://github.com/chibisov/backdoc
 
 <h1 id="pechat-otcheta-o-tekuschem-sostoyanii-raschetov-0x59">Печать отчета о текущем состоянии расчетов (0x59)</h1>
 
-<h2 id="opisanie-42">Описание</h2>
+<h2 id="opisanie-39">Описание</h2>
 
 <p>Команда печатает отчет из ФН о текущем состоянии расчетов. Если касса зарегистрирована для использования в автоматическом режиме - имя оператора можно не передавать.
 ФН версий до 1.34 не позволяет печатать отчет при открытой смене.</p>
 
-<h2 id="vhodnyie-parametryi-42">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-39">Входные параметры</h2>
 
 <ul>
 <li>(Имя оператора) Имя оператора</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-42">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-39">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="registratsiya-pereregistratsiya-0x60">Регистрация / перерегистрация (0x60)</h1>
 
-<h2 id="opisanie-43">Описание</h2>
+<h2 id="opisanie-40">Описание</h2>
 
 <p>При вводе ККТ в эксплуатацию ККТ данная операция называется «регистрацией». Функция переводит ФН из "нефискального" режима в "фискальный" и формирует отчет о регистрации ККТ. Эта же команда используется при формировании отчета о перерегистрации в связи с заменой ФН.</p>
 
@@ -3345,7 +3291,7 @@ https://github.com/chibisov/backdoc
 
 <p>Параметры Наименование ОФД, ИНН ОФД, адрес электронной почты отправителя, адрес сайта ФНС игнорируются в автономном режиме.</p>
 
-<h2 id="vhodnyie-parametryi-43">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-40">Входные параметры</h2>
 
 <ul>
 <li>(Число[0..1]) Замена ФН</li>
@@ -3369,11 +3315,11 @@ https://github.com/chibisov/backdoc
 <li>(Число[0..1]) Признак установки принтера в автомате.</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-43">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-40">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-13">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-14">Дополнительная информация</h2>
 
 <p>Замена ФН</p>
 
@@ -3533,78 +3479,78 @@ https://github.com/chibisov/backdoc
 
 <h1 id="tehnologicheskoe-obnulenie-0x63">Технологическое обнуление (0x63)</h1>
 
-<h2 id="opisanie-44">Описание</h2>
+<h2 id="opisanie-41">Описание</h2>
 
 <p>С помощью этой команды стирается вся регистрационная информация из ККТ,
 позволяющая в дальнейшем зарегистрировать ККТ на иной регистрационный номер и ИНН.</p>
 
-<h2 id="vhodnyie-parametryi-44">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-41">Входные параметры</h2>
 
 <ul>
 <li>(Дата) Текущая дата</li>
 <li>(Время) Текущее время</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-44">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-41">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="ustanovit-itog-cheka-0x64">Установить итог чека (0x64)</h1>
 
-<h2 id="opisanie-45">Описание</h2>
+<h2 id="opisanie-42">Описание</h2>
 
 <p>Команда устанавливает сумму итога по чеку. Эта команда может быть вызвана для открытого документа до команды "оплата". Рублевая часть переданной суммы должна совпадать с рублевой частью итога, подсчитанного ККТ</p>
 
-<h2 id="vhodnyie-parametryi-45">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-42">Входные параметры</h2>
 
 <ul>
 <li>(Дробное число) Сумма итога</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-45">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-42">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="zakryitie-fn-0x71">Закрытие ФН (0x71)</h1>
 
-<h2 id="opisanie-46">Описание</h2>
+<h2 id="opisanie-43">Описание</h2>
 
 <p>При помощи данной команды осуществляется закрытие ФН. Работа ККТ будет заблокирована. Используется для выполнения процедуры замены ФН.</p>
 
-<h2 id="vhodnyie-parametryi-46">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-43">Входные параметры</h2>
 
 <ul>
 <li>(Имя кассира) Имя кассира</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-46">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-43">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="raspechatat-dokument-iz-fn-0x73">Распечатать документ из ФН (0x73)</h1>
 
-<h2 id="opisanie-47">Описание</h2>
+<h2 id="opisanie-44">Описание</h2>
 
 <p>Команда распечатывает документ из ФН. Если номер документа 0, то печатается список всех регистраций/перерегистраций. Если установлен младший бит флагов, то документ не отрезается.</p>
 
-<h2 id="vhodnyie-parametryi-47">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-44">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер фискального документа</li>
 <li>(Целое число) Флаги</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-47">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-44">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="obmen-informatsiej-s-fn-0x78">Обмен информацией с ФН (0x78)</h1>
 
-<h2 id="opisanie-48">Описание</h2>
+<h2 id="opisanie-45">Описание</h2>
 
 <p>Функция позволяет обмениваться информацией с ФН</p>
 
-<h2 id="vhodnyie-parametryi-48">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-45">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер запроса</li>
@@ -3612,14 +3558,14 @@ https://github.com/chibisov/backdoc
 <li>(Целое число) Размер читаемого блока</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-48">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-45">Ответные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер запроса</li>
 <li>Возвращаемые данные. Тип и количество возвращаемых данных зависит от номера запроса</li>
 </ul>
 
-<h2 id="dopolnitelnaya-informatsiya-14">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-15">Дополнительная информация</h2>
 
 <table>
 <thead>
@@ -3714,6 +3660,12 @@ https://github.com/chibisov/backdoc
   <td>Запрос номера ФД начала смены</td>
   <td>Число</td>
   <td></td>
+</tr>
+<tr>
+  <td>18</td>
+  <td>Запрос ресурса свободной памяти в ФН</td>
+  <td>Целое число, Целое число</td>
+  <td>Приблизительное кол-во документов 5-летнего хранения, которые можно создать в ФН. Размер свободной области (в килобайтах) для записи документов 30-дневного хранения</td>
 </tr>
 </tbody>
 </table>
@@ -3943,31 +3895,31 @@ https://github.com/chibisov/backdoc
 
 <h1 id="otkryit-denezhnyij-yaschik-0x80">Открыть денежный ящик (0x80)</h1>
 
-<h2 id="opisanie-49">Описание</h2>
+<h2 id="opisanie-46">Описание</h2>
 
 <p>С помощью этой команды можно открыть денежный ящик, подключенный к ККТ.</p>
 
-<h2 id="vhodnyie-parametryi-49">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-46">Входные параметры</h2>
 
 <ul>
 <li>(Целое число 50...500) Длительность импульса в мс (150 по умолчанию)</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-49">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-46">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="poluchit-status-denezhnogo-yaschika-0x81">Получить статус денежного ящика (0x81)</h1>
 
-<h2 id="opisanie-50">Описание</h2>
+<h2 id="opisanie-47">Описание</h2>
 
 <p>Получить статус денежного ящика. 0 - закрыт, 1 - открыт</p>
 
-<h2 id="vhodnyie-parametryi-50">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-47">Входные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="otvetnyie-parametryi-50">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-47">Ответные параметры</h2>
 
 <ul>
 <li>(Целое число) Статус</li>
@@ -3975,29 +3927,29 @@ https://github.com/chibisov/backdoc
 
 <h1 id="podat-zvukovoj-signal-0x82">Подать звуковой сигнал (0x82)</h1>
 
-<h2 id="opisanie-51">Описание</h2>
+<h2 id="opisanie-48">Описание</h2>
 
 <p>Команда подает звуковой сигнал заданной длительности.</p>
 
-<h2 id="vhodnyie-parametryi-51">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-48">Входные параметры</h2>
 
 <ul>
 <li>(Целое число 10...2000) Длительность в мс</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-51">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-48">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="chtenie-bloka-pamyati-kkt-0x91">Чтение блока памяти ККТ (0x91)</h1>
 
-<h2 id="opisanie-52">Описание</h2>
+<h2 id="opisanie-49">Описание</h2>
 
 <p>Функция используется для чтения блока данных из памяти ККТ. Данные передаются из ККТ в виде последовательности пар символов, каждая из которых является шестнадцатеричным представлением одного байта данных.</p>
 
 <p>Тип данных определяет, из какой области нужно передать данные. Возможные значения - от 1 до 6.</p>
 
-<h2 id="vhodnyie-parametryi-52">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-49">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Тип данных</li>
@@ -4005,7 +3957,7 @@ https://github.com/chibisov/backdoc
 <li>(Целое число 1..64) Количество байт.</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-52">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-49">Ответные параметры</h2>
 
 <ul>
 <li>Блок данных в шестнадцатеричном виде</li>
@@ -4013,21 +3965,21 @@ https://github.com/chibisov/backdoc
 
 <h1 id="ustanovit-skorost-obmena-0x93">Установить скорость обмена (0x93)</h1>
 
-<h2 id="opisanie-53">Описание</h2>
+<h2 id="opisanie-50">Описание</h2>
 
 <p>Команда позволяет изменить скорость обмена по последовательному интерфейсу.</p>
 
-<h2 id="vhodnyie-parametryi-53">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-50">Входные параметры</h2>
 
 <ul>
 <li>(Целое число 0..5) Скорость обмена</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-53">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-50">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="dopolnitelnaya-informatsiya-15">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-16">Дополнительная информация</h2>
 
 <p>Скорость обмена</p>
 
@@ -4068,9 +4020,55 @@ https://github.com/chibisov/backdoc
 
 <h1 id="raspechatat-servisnyie-dannyie-0x94">Распечатать сервисные данные (0x94)</h1>
 
-<h2 id="opisanie-54">Описание</h2>
+<h2 id="opisanie-51">Описание</h2>
 
 <p>Эта команда печатает на чеке данные по текущим настройкам, состоянию и дополнительной сервисной информации.</p>
+
+<h2 id="vhodnyie-parametryi-51">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-51">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="poluchit-tekuschij-url-servera-ofd-0x9e">Получить текущий URL сервера ОФД (0x9E)</h1>
+
+<h2 id="opisanie-52">Описание</h2>
+
+<p>Эта команда возвращает текущий URL сервера ОФД.</p>
+
+<h2 id="vhodnyie-parametryi-52">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-52">Ответные параметры</h2>
+
+<ul>
+<li>(Строка[64]) URL сервера ОФД</li>
+</ul>
+
+<h1 id="ustanovit-url-servera-ofd-0x9f">Установить URL сервера ОФД (0x9F)</h1>
+
+<h2 id="opisanie-53">Описание</h2>
+
+<p>Эта команда устанавливает URL сервера ОФД.</p>
+
+<h2 id="vhodnyie-parametryi-53">Входные параметры</h2>
+
+<ul>
+<li>(Строка[64]) URL сервера ОФД</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-53">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="avarijnoe-zakryitie-smenyi-0xa0">Аварийное закрытие смены (0xA0)</h1>
+
+<h2 id="opisanie-54">Описание</h2>
+
+<p>Эта команда позволяет закрыть смену в случае неисправности ФН. Результатом является отчет по закрытой смене, далее для продолжения работы необходимо заменить ФН.</p>
 
 <h2 id="vhodnyie-parametryi-54">Входные параметры</h2>
 
@@ -4080,11 +4078,11 @@ https://github.com/chibisov/backdoc
 
 <p>Нет</p>
 
-<h1 id="poluchit-tekuschij-url-servera-ofd-0x9e">Получить текущий URL сервера ОФД (0x9E)</h1>
+<h1 id="pechat-kopii-poslednego-otcheta-o-zakryitii-smenyi-0xa1">Печать копии последнего отчета о закрытии смены(0xA1)</h1>
 
 <h2 id="opisanie-55">Описание</h2>
 
-<p>Эта команда возвращает текущий URL сервера ОФД.</p>
+<p>Эта команда позволяет распечатать копию последнего отчета о закрытии, для проверки со стороны контролирующих органов.</p>
 
 <h2 id="vhodnyie-parametryi-55">Входные параметры</h2>
 
@@ -4092,31 +4090,27 @@ https://github.com/chibisov/backdoc
 
 <h2 id="otvetnyie-parametryi-55">Ответные параметры</h2>
 
-<ul>
-<li>(Строка[64]) URL сервера ОФД</li>
-</ul>
+<p>Нет</p>
 
-<h1 id="ustanovit-url-servera-ofd-0x9f">Установить URL сервера ОФД (0x9F)</h1>
+<h1 id="pechat-kopii-cheka-registratsii-pereregistratsii-0xa3">Печать копии чека регистрации/перерегистрации (0xA3)</h1>
 
 <h2 id="opisanie-56">Описание</h2>
 
-<p>Эта команда устанавливает URL сервера ОФД.</p>
+<p>Эта команда позволяет распечатать копию чека регистрации, для проверки со стороны контролирующих органов.</p>
 
 <h2 id="vhodnyie-parametryi-56">Входные параметры</h2>
 
-<ul>
-<li>(Строка[64]) URL сервера ОФД</li>
-</ul>
+<p>Нет</p>
 
 <h2 id="otvetnyie-parametryi-56">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h1 id="avarijnoe-zakryitie-smenyi-0xa0">Аварийное закрытие смены (0xA0)</h1>
+<h1 id="avarijnoe-zakryitie-fn-0xa4">Аварийное закрытие ФН (0xA4)</h1>
 
 <h2 id="opisanie-57">Описание</h2>
 
-<p>Эта команда позволяет закрыть смену в случае неисправности ФН. Результатом является отчет по закрытой смене, далее для продолжения работы необходимо заменить ФН.</p>
+<p>Эта команда позволяет привести ККТ в состояние, пригодное для перерегистрации с заменой ФН, в случае если ФН вышел из строя и нет возможности выполнить команду “Закрытие архива ФН (0x71)”. Перед выполнением команды необходимо закрыть смену с помощью команды “Аварийное закрытие смены (0xA0)”.</p>
 
 <h2 id="vhodnyie-parametryi-57">Входные параметры</h2>
 
@@ -4126,11 +4120,11 @@ https://github.com/chibisov/backdoc
 
 <p>Нет</p>
 
-<h1 id="pechat-kopii-poslednego-otcheta-o-zakryitii-smenyi-0xa1">Печать копии последнего отчета о закрытии смены(0xA1)</h1>
+<h1 id="proverka-dostupnosti-servera-ofd-0xa5">Проверка доступности сервера ОФД (0xA5)</h1>
 
 <h2 id="opisanie-58">Описание</h2>
 
-<p>Эта команда позволяет распечатать копию последнего отчета о закрытии, для проверки со стороны контролирующих органов.</p>
+<p>Эта команда позволяет проверить доступность сервера ОФД путём попытки установки tcp соединения с ним.</p>
 
 <h2 id="vhodnyie-parametryi-58">Входные параметры</h2>
 
@@ -4138,53 +4132,11 @@ https://github.com/chibisov/backdoc
 
 <h2 id="otvetnyie-parametryi-58">Ответные параметры</h2>
 
-<p>Нет</p>
-
-<h1 id="pechat-kopii-cheka-registratsii-pereregistratsii-0xa3">Печать копии чека регистрации/перерегистрации (0xA3)</h1>
-
-<h2 id="opisanie-59">Описание</h2>
-
-<p>Эта команда позволяет распечатать копию чека регистрации, для проверки со стороны контролирующих органов.</p>
-
-<h2 id="vhodnyie-parametryi-59">Входные параметры</h2>
-
-<p>Нет</p>
-
-<h2 id="otvetnyie-parametryi-59">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="avarijnoe-zakryitie-fn-0xa4">Аварийное закрытие ФН (0xA4)</h1>
-
-<h2 id="opisanie-60">Описание</h2>
-
-<p>Эта команда позволяет привести ККТ в состояние, пригодное для перерегистрации с заменой ФН, в случае если ФН вышел из строя и нет возможности выполнить команду “Закрытие архива ФН (0x71)”. Перед выполнением команды необходимо закрыть смену с помощью команды “Аварийное закрытие смены (0xA0)”.</p>
-
-<h2 id="vhodnyie-parametryi-60">Входные параметры</h2>
-
-<p>Нет</p>
-
-<h2 id="otvetnyie-parametryi-60">Ответные параметры</h2>
-
-<p>Нет</p>
-
-<h1 id="proverka-dostupnosti-servera-ofd-0xa5">Проверка доступности сервера ОФД (0xA5)</h1>
-
-<h2 id="opisanie-61">Описание</h2>
-
-<p>Эта команда позволяет проверить доступность сервера ОФД путём попытки установки tcp соединения с ним.</p>
-
-<h2 id="vhodnyie-parametryi-61">Входные параметры</h2>
-
-<p>Нет</p>
-
-<h2 id="otvetnyie-parametryi-61">Ответные параметры</h2>
-
 <ul>
 <li>(Целое число) Статус проверки</li>
 </ul>
 
-<h2 id="dopolnitelnaya-informatsiya-16">Дополнительная информация</h2>
+<h2 id="dopolnitelnaya-informatsiya-17">Дополнительная информация</h2>
 
 <table>
 <thead>
@@ -4211,15 +4163,15 @@ https://github.com/chibisov/backdoc
 
 <h1 id="otpravit-dannyie-dlya-otchyota-cash-info-v-kabinet-0xa6">Отправить данные для отчёта cash_info в Кабинет (0xA6)</h1>
 
-<h2 id="opisanie-62">Описание</h2>
+<h2 id="opisanie-59">Описание</h2>
 
 <p>Эта команда отправляет данные, необходимые для формирования отчёта cash_info в Кабинет.</p>
 
-<h2 id="vhodnyie-parametryi-62">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-59">Входные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="otvetnyie-parametryi-62">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-59">Ответные параметры</h2>
 
 <ul>
 <li>(Строка) uuid</li>
@@ -4247,21 +4199,143 @@ https://github.com/chibisov/backdoc
 
 <h1 id="otpravit-dannyie-dlya-otchyota-register-v-kabinet-0xa7">Отправить данные для отчёта register в Кабинет(0xA7)</h1>
 
-<h2 id="opisanie-63">Описание</h2>
+<h2 id="opisanie-60">Описание</h2>
 
 <p>Эта команда отпраляет данные, необходимые для формирования отчёта report в Кабинет.</p>
 
-<h2 id="vhodnyie-parametryi-63">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-60">Входные параметры</h2>
 
 <p>Нет</p>
 
-<h2 id="otvetnyie-parametryi-63">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-60">Ответные параметры</h2>
 
 <ul>
 <li>(Строка) uuid</li>
 <li>(Строка) model</li>
 <li>(Строка) readable_model</li>
 </ul>
+
+<h1 id="ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</h1>
+
+<h2 id="opisanie-61">Описание</h2>
+
+<p>Эта команда удаляет все данные в СКЛ.</p>
+
+<h2 id="vhodnyie-parametryi-61">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-61">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</h1>
+
+<h2 id="opisanie-62">Описание</h2>
+
+<p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне сквозных номеров документа. Если конечный номер документа равен нулю или отсутствует, печатается только один документ по начальному номеру.</p>
+
+<h2 id="vhodnyie-parametryi-62">Входные параметры</h2>
+
+<ul>
+<li>(Целое число) Начальный номер документа</li>
+<li>(Целое число) Конечный номер документа</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-62">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</h1>
+
+<h2 id="opisanie-63">Описание</h2>
+
+<p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне смен. Если конечный номер смены равен нулю или отсутствует, печатаются только за один одну смену по начальному номеру.</p>
+
+<h2 id="vhodnyie-parametryi-63">Входные параметры</h2>
+
+<ul>
+<li>(Целое число) Начальный номер смены</li>
+<li>(Целое число) Конечный номер смены</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-63">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</h1>
+
+<h2 id="opisanie-64">Описание</h2>
+
+<p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне дат.</p>
+
+<h2 id="vhodnyie-parametryi-64">Входные параметры</h2>
+
+<ul>
+<li>(Дата) Начальная дата</li>
+<li>(Дата) Конечная дата.</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-64">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</h1>
+
+<h2 id="opisanie-65">Описание</h2>
+
+<p>Эта команда позволяет получать различную информацию по СКЛ. Тип и количество возвращаемых данных зависит от значения передаваемого параметра – номер запроса. Тип и количество возвращаемых данных зависит от значения номера запроса.</p>
+
+<h2 id="vhodnyie-parametryi-65">Входные параметры</h2>
+
+<ul>
+<li>(Целое число) Номер запроса</li>
+<li>(Целое число) Параметры запроса</li>
+</ul>
+
+<h2 id="otvetnyie-parametryi-65">Ответные параметры</h2>
+
+<ul>
+<li>(Целое число) Номер запроса</li>
+<li>Возвращаемые данные. Тип и количество возвращаемых данных зависит от номера запроса</li>
+</ul>
+
+<table>
+<thead>
+<tr>
+  <th>Номер запроса (DEC)</th>
+  <th>Наименование Запроса</th>
+  <th>Формат возвращаемых данных</th>
+  <th>Комментарии</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>Вернуть начальный и конечный номера документа в СКЛ. Если СКЛ чистая, возвращаются нулевые значения</td>
+  <td>Целое число, Целое число</td>
+  <td>Начальный номер документа, конечный номер документа</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Вернуть начальный и конечный номера смены в СКЛ. Если СКЛ чистая, возвращаются нулевые значения</td>
+  <td>Целое число, Целое число</td>
+  <td>Начальный номер смены, Конечный номер смены</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Вернуть начальную и конечную   дату в СКЛ. Если СКЛ чистая, возвращаются нулевые значения</td>
+  <td>Дата, Дата</td>
+  <td>Начальная дата, Конечная дата</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Вернуть номера первого и последнего документа  смены. Дополнительно передается параметр "(Целое число) Номер смены"</td>
+  <td>Целое число, Целое число</td>
+  <td>Номер первого документа в смене, Номер последнего документа в смене</td>
+</tr>
+</tbody>
+</table>
 
 <h1 id="nastrojki-kkt">Настройки ККТ</h1>
 
@@ -4314,7 +4388,7 @@ https://github.com/chibisov/backdoc
 <tbody>
 <tr>
   <td>0..4 бит</td>
-  <td>Номер дизайна чека: 0 - обычный, 1 - расширенный, 2 - экономный, 3 - нано, 4 - расширенный для бумаги 57мм, экономный для бумаги 57мм, 16 и выше - дополнительные загружаемые дизайны</td>
+  <td>Номер дизайна чека: 0 - обычный</td>
 </tr>
 <tr>
   <td>5</td>
@@ -4477,14 +4551,6 @@ https://github.com/chibisov/backdoc
 
 <ul>
 <li>(Число[1.65535]) Ячейка таблицы, которую внешнее ПО может использовать для своих целей.</li>
-</ul>
-
-<h2 id="12-nastrojki-pu-massiv-1-3">12 - Настройки ПУ (Массив 1..3)</h2>
-
-<ul>
-<li>1 - (Число) Коррекция яркости печати (20..100%)</li>
-<li>2 - (Число) Коррекция частичной отрезки для бумаги 80 мм (0…100%)</li>
-<li>3 - (Число) Коррекция частичной отрезки для бумаги 57 мм (0…100%)</li>
 </ul>
 
 <h2 id="20-parol-dlya-svyazi">20 - Пароль для связи</h2>
