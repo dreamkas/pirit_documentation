@@ -848,35 +848,47 @@ https://github.com/chibisov/backdoc
     <li><a href="#vhodnyie-parametryi-59">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-59">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</a>
+  <li><a href="#ustanovit-flag-nalichiya-registratsii-kkt-v-kabinete-0xa8">Установить флаг наличия регистрации ККТ в Кабинете(0xA8)</a>
   <ul>
     <li><a href="#opisanie-60">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-60">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-60">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</a>
+  <li><a href="#schitat-flag-nalichiya-registratsii-kkt-v-kabinete-0xa9">Считать флаг наличия регистрации ККТ в Кабинете(0xA9)</a>
   <ul>
     <li><a href="#opisanie-61">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-61">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-61">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</a>
+  <li><a href="#ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</a>
   <ul>
     <li><a href="#opisanie-62">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-62">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-62">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</a>
+  <li><a href="#raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</a>
   <ul>
     <li><a href="#opisanie-63">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-63">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-63">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</a>
+  <li><a href="#raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</a>
   <ul>
     <li><a href="#opisanie-64">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-64">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-64">Ответные параметры</a></li>
+  </ul></li>
+  <li><a href="#raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</a>
+  <ul>
+    <li><a href="#opisanie-65">Описание</a></li>
+    <li><a href="#vhodnyie-parametryi-65">Входные параметры</a></li>
+    <li><a href="#otvetnyie-parametryi-65">Ответные параметры</a></li>
+  </ul></li>
+  <li><a href="#poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</a>
+  <ul>
+    <li><a href="#opisanie-66">Описание</a></li>
+    <li><a href="#vhodnyie-parametryi-66">Входные параметры</a></li>
+    <li><a href="#otvetnyie-parametryi-66">Ответные параметры</a></li>
   </ul></li>
   <li><a href="#nastrojki-kkt">Настройки ККТ</a>
   <ul>
@@ -4134,85 +4146,117 @@ https://github.com/chibisov/backdoc
 <li>(Строка) readable_model</li>
 </ul>
 
-<h1 id="ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</h1>
+<h1 id="ustanovit-flag-nalichiya-registratsii-kkt-v-kabinete-0xa8">Установить флаг наличия регистрации ККТ в Кабинете(0xA8)</h1>
 
 <h2 id="opisanie-60">Описание</h2>
 
-<p>Эта команда удаляет все данные в СКЛ.</p>
+<p>Эта команда позволяет установить флаг наличия регистрации ККТ в Кабинете (ККТ зарегистрирован/не зарегистрирован)</p>
 
 <h2 id="vhodnyie-parametryi-60">Входные параметры</h2>
 
-<p>Нет</p>
+<ul>
+<li>(Число) 16-ти битное число</li>
+</ul>
 
 <h2 id="otvetnyie-parametryi-60">Ответные параметры</h2>
 
 <p>Нет</p>
 
-<h1 id="raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</h1>
+<h1 id="schitat-flag-nalichiya-registratsii-kkt-v-kabinete-0xa9">Считать флаг наличия регистрации ККТ в Кабинете(0xA9)</h1>
 
 <h2 id="opisanie-61">Описание</h2>
 
-<p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне сквозных номеров документа. Если конечный номер документа равен нулю или отсутствует, печатается только один документ по начальному номеру.</p>
+<p>Эта команда позволяет считать флаг наличия регистрации ККТ в Кабинете (ККТ зарегистрирован/не зарегистрирован)</p>
 
 <h2 id="vhodnyie-parametryi-61">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-61">Ответные параметры</h2>
+
+<ul>
+<li>(Число) 16-ти битное число</li>
+</ul>
+
+<h1 id="ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</h1>
+
+<h2 id="opisanie-62">Описание</h2>
+
+<p>Эта команда удаляет все данные в СКЛ.</p>
+
+<h2 id="vhodnyie-parametryi-62">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-62">Ответные параметры</h2>
+
+<p>Нет</p>
+
+<h1 id="raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</h1>
+
+<h2 id="opisanie-63">Описание</h2>
+
+<p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне сквозных номеров документа. Если конечный номер документа равен нулю или отсутствует, печатается только один документ по начальному номеру.</p>
+
+<h2 id="vhodnyie-parametryi-63">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Начальный номер документа</li>
 <li>(Целое число) Конечный номер документа</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-61">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-63">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</h1>
 
-<h2 id="opisanie-62">Описание</h2>
+<h2 id="opisanie-64">Описание</h2>
 
 <p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне смен. Если конечный номер смены равен нулю или отсутствует, печатаются только за один одну смену по начальному номеру.</p>
 
-<h2 id="vhodnyie-parametryi-62">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-64">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Начальный номер смены</li>
 <li>(Целое число) Конечный номер смены</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-62">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-64">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</h1>
 
-<h2 id="opisanie-63">Описание</h2>
+<h2 id="opisanie-65">Описание</h2>
 
 <p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне дат.</p>
 
-<h2 id="vhodnyie-parametryi-63">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-65">Входные параметры</h2>
 
 <ul>
 <li>(Дата) Начальная дата</li>
 <li>(Дата) Конечная дата.</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-63">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-65">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</h1>
 
-<h2 id="opisanie-64">Описание</h2>
+<h2 id="opisanie-66">Описание</h2>
 
 <p>Эта команда позволяет получать различную информацию по СКЛ. Тип и количество возвращаемых данных зависит от значения передаваемого параметра – номер запроса. Тип и количество возвращаемых данных зависит от значения номера запроса.</p>
 
-<h2 id="vhodnyie-parametryi-64">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-66">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер запроса</li>
 <li>(Целое число) Параметры запроса</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-64">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-66">Ответные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер запроса</li>
