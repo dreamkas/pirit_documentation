@@ -867,35 +867,42 @@ https://github.com/chibisov/backdoc
     <li><a href="#vhodnyie-parametryi-62">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-62">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</a>
+  <li><a href="#aktivirovat-uslugi-0xaa">Активировать услуги (0xAA)</a>
   <ul>
     <li><a href="#opisanie-63">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-63">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-63">Ответные параметры</a></li>
+    <li><a href="#tablitsa-zaprosov">Таблица запросов</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</a>
+  <li><a href="#ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</a>
   <ul>
     <li><a href="#opisanie-64">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-64">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-64">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</a>
+  <li><a href="#raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</a>
   <ul>
     <li><a href="#opisanie-65">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-65">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-65">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</a>
+  <li><a href="#raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</a>
   <ul>
     <li><a href="#opisanie-66">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-66">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-66">Ответные параметры</a></li>
   </ul></li>
-  <li><a href="#poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</a>
+  <li><a href="#raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</a>
   <ul>
     <li><a href="#opisanie-67">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-67">Входные параметры</a></li>
     <li><a href="#otvetnyie-parametryi-67">Ответные параметры</a></li>
+  </ul></li>
+  <li><a href="#poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</a>
+  <ul>
+    <li><a href="#opisanie-68">Описание</a></li>
+    <li><a href="#vhodnyie-parametryi-68">Входные параметры</a></li>
+    <li><a href="#otvetnyie-parametryi-68">Ответные параметры</a></li>
   </ul></li>
   <li><a href="#nastrojki-kkt">Настройки ККТ</a>
   <ul>
@@ -4278,88 +4285,143 @@ https://github.com/chibisov/backdoc
 <h2 id="otvetnyie-parametryi-62">Ответные параметры</h2>
 
 <ul>
-<li>(Число) 16-ти битное число</li>
+<li>(Число) 16-ти битное число
+<h1 id="aktivirovat-uslugi-0xaa">Активировать услуги (0xAA)</h1></li>
 </ul>
-
-<h1 id="ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</h1>
 
 <h2 id="opisanie-63">Описание</h2>
 
-<p>Эта команда удаляет все данные в СКЛ.</p>
+<p>Эта команда позволяет активировать услуги в ККТ и запросить информацию по уже активированным.</p>
 
 <h2 id="vhodnyie-parametryi-63">Входные параметры</h2>
 
-<p>Нет</p>
+<ul>
+<li>(Число) Номер запроса.</li>
+<li>Дополнительные параметры описаны в таблице для каждого запроса.</li>
+</ul>
 
 <h2 id="otvetnyie-parametryi-63">Ответные параметры</h2>
+
+<p>Описаны в таблице запросов.</p>
+
+<h2 id="tablitsa-zaprosov">Таблица запросов</h2>
+
+<table>
+<thead>
+<tr>
+  <th>Номер запроса</th>
+  <th>Описание</th>
+  <th>Доп. входные параметры</th>
+  <th>Ответные параметры</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>Активировать ключ</td>
+  <td>(Строка) Ключ для активации</td>
+  <td>Нет</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>Запросить активирована ли услуга</td>
+  <td>(Число) Номер услуги</td>
+  <td>(Число) Код ответа (1 - активна, 0 - не активна); (Строка) Текстовое описание услуги; (Дата) Дата окончания действия услуги (ддммгг, для постоянных услуг будет 000000)</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>Распечатать все активированные услуги</td>
+  <td>Нет</td>
+  <td>Нет</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>Вернуть строку с активированными услугами</td>
+  <td>Нет</td>
+  <td>(Строка) Строка, содержащая активированные услуги.</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="ochistit-skl-0xv0">Очистить СКЛ (0xВ0)</h1>
+
+<h2 id="opisanie-64">Описание</h2>
+
+<p>Эта команда удаляет все данные в СКЛ.</p>
+
+<h2 id="vhodnyie-parametryi-64">Входные параметры</h2>
+
+<p>Нет</p>
+
+<h2 id="otvetnyie-parametryi-64">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="raspechatat-dokumentyi-iz-skl-0xv1">Распечатать документы из СКЛ (0xВ1)</h1>
 
-<h2 id="opisanie-64">Описание</h2>
+<h2 id="opisanie-65">Описание</h2>
 
 <p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне сквозных номеров документа. Если конечный номер документа равен нулю или отсутствует, печатается только один документ по начальному номеру.</p>
 
-<h2 id="vhodnyie-parametryi-64">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-65">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Начальный номер документа</li>
 <li>(Целое число) Конечный номер документа</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-64">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-65">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="raspechatat-dannyie-po-smenam-iz-skl-0xv2">Распечатать данные по сменам из СКЛ (0xВ2)</h1>
 
-<h2 id="opisanie-65">Описание</h2>
+<h2 id="opisanie-66">Описание</h2>
 
 <p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне смен. Если конечный номер смены равен нулю или отсутствует, печатаются только за один одну смену по начальному номеру.</p>
 
-<h2 id="vhodnyie-parametryi-65">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-66">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Начальный номер смены</li>
 <li>(Целое число) Конечный номер смены</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-65">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-66">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="raspechatat-dannyie-po-datam-iz-skl-0xv3">Распечатать данные по датам из СКЛ (0xВ3)</h1>
 
-<h2 id="opisanie-66">Описание</h2>
+<h2 id="opisanie-67">Описание</h2>
 
 <p>Эта команда позволяет найти и распечатать документы из СКЛ, в заданном диапазоне дат.</p>
 
-<h2 id="vhodnyie-parametryi-66">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-67">Входные параметры</h2>
 
 <ul>
 <li>(Дата) Начальная дата</li>
 <li>(Дата) Конечная дата.</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-66">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-67">Ответные параметры</h2>
 
 <p>Нет</p>
 
 <h1 id="poluchit-dannyie-po-skl-0xv4">Получить данные по СКЛ(0xВ4)</h1>
 
-<h2 id="opisanie-67">Описание</h2>
+<h2 id="opisanie-68">Описание</h2>
 
 <p>Эта команда позволяет получать различную информацию по СКЛ. Тип и количество возвращаемых данных зависит от значения передаваемого параметра – номер запроса. Тип и количество возвращаемых данных зависит от значения номера запроса.</p>
 
-<h2 id="vhodnyie-parametryi-67">Входные параметры</h2>
+<h2 id="vhodnyie-parametryi-68">Входные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер запроса</li>
 <li>(Целое число) Параметры запроса</li>
 </ul>
 
-<h2 id="otvetnyie-parametryi-67">Ответные параметры</h2>
+<h2 id="otvetnyie-parametryi-68">Ответные параметры</h2>
 
 <ul>
 <li>(Целое число) Номер запроса</li>
