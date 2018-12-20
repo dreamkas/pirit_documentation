@@ -2024,7 +2024,7 @@ char_map = {u'À': 'A', u'Á': 'A', u'Â': 'A', u'Ã': 'A', u'Ä': 'Ae', u'Å': 
 
 def replace_char(m):
     char = m.group()
-    if char_map.has_key(char):
+    if char in char_map:
         return char_map[char]
     else:
         return char
@@ -2911,7 +2911,7 @@ class BackDoc(object):
         kwargs = {}
         kwargs['title'] = force_text(parsed.get('title') or 'Documentation')
         if parsed.get('source'):
-            kwargs['markdown_src'] = open(parsed['source'], 'r').read()
+            kwargs['markdown_src'] = open(parsed['source'], 'r', encoding='utf8').read()
         else:
             kwargs['markdown_src'] = self.stdin.read()
         kwargs['markdown_src'] = force_text(kwargs['markdown_src'] or '')

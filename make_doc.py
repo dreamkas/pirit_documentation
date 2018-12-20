@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 import os
 import sys
@@ -137,12 +137,12 @@ def main():
     # proc = subprocess.Popen("rm documentation_fm16_1_1.md", shell=True, stdout=subprocess.PIPE)
     # out = proc.stdout.readlines()
 
-    os.remove(documentationPirit1fFd2OutputFile);
-    os.remove(documentationPirit1fFd3OutputFile);
-    os.remove(documentationPirit2fFd2OutputFile);
-    os.remove(documentationFm16Fd2OutputFile);
-    os.remove(documentationPirit2fFd3OutputFile);
-    os.remove(documentationFm16Fd3OutputFile);
+    os.remove(documentationPirit1fFd2OutputFile)
+    os.remove(documentationPirit1fFd3OutputFile)
+    os.remove(documentationPirit2fFd2OutputFile)
+    os.remove(documentationFm16Fd2OutputFile)
+    os.remove(documentationPirit2fFd3OutputFile)
+    os.remove(documentationFm16Fd3OutputFile)
     print("Done")
 
 if __name__ == '__main__':
