@@ -107,16 +107,16 @@ def main():
     # proc = subprocess.Popen("python backdoc.py -t Pirit1F -s documentation_pirit1f_1_1.md > output/documentation_pirit1f_1_1.html", shell=True, stdout=subprocess.PIPE)
     # out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("python backdoc.py -t Pirit2F -s documentation_pirit2f_1_05.md > output/documentation_pirit2f_1_05.html", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("python3 backdoc.py -t Pirit2F -s documentation_pirit2f_1_05.md > output/documentation_pirit2f_1_05.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("python backdoc.py -t Pirit2F -s documentation_pirit2f_1_1.md > output/documentation_pirit2f_1_1.html", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("python3 backdoc.py -t Pirit2F -s documentation_pirit2f_1_1.md > output/documentation_pirit2f_1_1.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("python backdoc.py -t FM16 -s documentation_fm16_1_05.md > output/documentation_fm16_1_05.html", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("python3 backdoc.py -t FM16 -s documentation_fm16_1_05.md > output/documentation_fm16_1_05.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
-    proc = subprocess.Popen("python backdoc.py -t FM16 -s documentation_fm16_1_1.md > output/documentation_fm16_1_1.html", shell=True, stdout=subprocess.PIPE)
+    proc = subprocess.Popen("python3 backdoc.py -t FM16 -s documentation_fm16_1_1.md > output/documentation_fm16_1_1.html", shell=True, stdout=subprocess.PIPE)
     out = proc.stdout.readlines()
 
     # proc = subprocess.Popen("rm documentation_pirit1f_1_05.md", shell=True, stdout=subprocess.PIPE)
