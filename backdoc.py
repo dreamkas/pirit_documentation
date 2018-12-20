@@ -2947,7 +2947,7 @@ class BackDoc(object):
 
 if __name__ == '__main__':
     BackDoc(
-        markdown_converter=Markdown(extras=['toc', 'tables']), 
+        markdown_converter=Markdown(extras=['toc', 'tables']),
         template_html=template_html,
         stdin=sys.stdin,
         stdout=sys.stdout
