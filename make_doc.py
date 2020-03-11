@@ -38,6 +38,7 @@ def main():
             "Pirit1f 1.1": [None, None, None, False],
             "Pirit2f 1.05": ["Pirit2F", "pirit2f_1_05", None, False],
             "Pirit2f 1.1": ["Pirit2F", "pirit2f_1_1", None, False],
+            "Punix": ["Punix", "punix", None, False],
             "FM16 1.05": ["FM16", "fm16_1_05", None, False],
             "FM16 1.1": ["FM16", "fm16_1_1", None, False],
             commonLabel: [None, None, None, False]}
