@@ -41,6 +41,7 @@ def main():
             "Punix": ["Punix", "punix", None, False],
             "FM16 1.05": ["FM16", "fm16_1_05", None, False],
             "FM16 1.1": ["FM16", "fm16_1_1", None, False],
+            "FM16 1.2": ["FM16", "fm16_1_2", None, False],
             commonLabel: [None, None, None, False]}
 
     for key in dict.keys():
