@@ -34,9 +34,7 @@ def main():
     controlStringLabel = "<<<<<< "  # control line starts with this string
     commonLabel = "common"
 
-    dict = {"Pirit1f 1.05": [None, None, None, False],
-            "Pirit1f 1.1": [None, None, None, False],
-            "Pirit2f 1.05": ["Pirit2F", "pirit2f_1_05", None, False],
+    dict = {"Pirit2f 1.05": ["Pirit2F", "pirit2f_1_05", None, False],
             "Pirit2f 1.1": ["Pirit2F", "pirit2f_1_1", None, False],
             "Punix": ["Punix", "punix", None, False],
             "FM16 1.05": ["FM16", "fm16_1_05", None, False],
