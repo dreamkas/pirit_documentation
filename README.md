@@ -4,7 +4,7 @@
 * Python 3
 
 Удобный редактор для Markdown:
-* [Haroopad](http://pad.haroopress.com/user.html)
+* [Haroopad] (http://pad.haroopress.com/user.html)
 
 ## Генерирование документации
 Для генерирования документации запустить **make_doc.py**. Сгенерированная документация будет помещена в папку **output**.
