@@ -2457,7 +2457,7 @@ https://github.com/chibisov/backdoc
         }
 
         img {
-            max-width: 100%;
+            max-width: 150%;
             height: auto;
         }
 
