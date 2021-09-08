@@ -36,7 +36,8 @@ def main():
 
     dict = {"Pirit2f 1.05": ["Pirit2F", "pirit2f_1_05", None, False],
             "Pirit2f 1.2": ["Pirit2F", "pirit2f_1_2", None, False],
-            "Punix": ["Punix", "punix", None, False],
+            "Punix 1.05": ["Punix", "punix_1_05", None, False],
+            "Punix 1.2": ["Punix", "punix_1_2", None, False],
             "FM16 1.05": ["FM16", "fm16_1_05", None, False],
             "FM16 1.2": ["FM16", "fm16_1_2", None, False],
             commonLabel: [None, None, None, False]}
