@@ -736,7 +736,7 @@ https://github.com/chibisov/backdoc
     <li><a href="#otvetnyie-parametryi-41">Ответные параметры</a></li>
     <li><a href="#dopolnitelnaya-informatsiya-12">Дополнительная информация</a></li>
   </ul></li>
-  <li><a href="#formirovanie-i-pechat-cheka-korrektsii-0x58">Формирование и печать чека коррекции (0x58)</a>
+  <li><a href="#formirovanie-i-pechat-otkryitie-cheka-korrektsii-0x58">Формирование и печать/открытие чека коррекции (0x58)</a>
   <ul>
     <li><a href="#opisanie-42">Описание</a></li>
     <li><a href="#vhodnyie-parametryi-42">Входные параметры</a></li>
@@ -3611,7 +3611,7 @@ https://github.com/chibisov/backdoc
 
 <p>При передаче тэга 1057 (признак агента) необходимо обеспечить наличие в составе документа хотя бы 1 предмета расчета поля с тэгом 1226 (ИНН поставщика) - см. команду 0x24.</p>
 
-<h1 id="formirovanie-i-pechat-cheka-korrektsii-0x58">Формирование и печать чека коррекции (0x58)</h1>
+<h1 id="formirovanie-i-pechat-otkryitie-cheka-korrektsii-0x58">Формирование и печать/открытие чека коррекции (0x58)</h1>
 
 <h2 id="opisanie-42">Описание</h2>
 
@@ -3675,8 +3675,18 @@ https://github.com/chibisov/backdoc
   <td>5</td>
   <td>Если бит = 0, то вместо суммы налога в поле  "Сумма налога по ставке 20%" передается номер ставки налога, по которой исчисляется сумма налога, остальные суммы налогов не воспринимаются</td>
 </tr>
+<tr>
+  <td>6</td>
+  <td>Зарезервировано</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>1 - чек не формируется полностью, только открывается, параметры сумм платежей должны быть заполнены любыми числами, например нулями</td>
+</tr>
 </tbody>
 </table>
+
+<p>бит 7 реализован, начиная с версии 565.1.10 и 665.4.10</p>
 
 <p><strong>Система налогообложения</strong></p>
 
