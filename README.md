@@ -28,7 +28,8 @@
  * Pirit2f 1.2
  * FM16 1.05
  * FM16 1.2
- * Punix
+ * Punix 1.05
+ * Punix 1.2
  * common
 
 ### Пример
